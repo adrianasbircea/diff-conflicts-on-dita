@@ -1,10 +1,10 @@
 # 2-Way Isolated Cases
 
-One directory per case, each with its own file pair and its own README. Unlike `../2way-base.dita`
-and `../2way-modified.dita`, which pack every case into one document, these files are small and
+One directory per case, each with its own file pair and its own README. Unlike `../../../base/2way/2way-base.dita`
+and `../../../base/2way/2way-modified.dita`, which pack every case into one document, these files are small and
 carry a single theme, so a failure points straight at one behaviour.
 
-Conventions are the ones from `../README-2way.md`: DITA topic with a DOCTYPE, an `@id` on every
+Conventions are the ones from `../../../base/2way/README-2way.md`: DITA topic with a DOCTYPE, an `@id` on every
 element worth referring to, Oxygen review PIs (`oxy_comment_start/_end`, `oxy_insert_start/_end`,
 `oxy_delete`, `oxy_attributes`), and a README whose tables give *Location*, *Change* and *Expected*.
 Element ids are reused from the master base wherever the case covers the same content, so ids like
@@ -12,8 +12,8 @@ Element ids are reused from the master base wherever the case covers the same co
 
 | Case | Directory | Theme | Review markup |
 | --- | --- | --- | --- |
-| N-01 | `formatting-noise/` | Reformatting noise: indentation, re-wrap, attribute order, quote style, character references, self-closing tags - against two changes that *are* real, one of them inside `xml:space="preserve"` | none |
-| X-01 | `xml-comments/` | Plain `<!-- -->` comments added, deleted, reworded, moved, inside mixed content, and a block commented out | none |
+| N-01 | `formatting-noise/` | Reformatting noise: indentation, re-wrap, attribute order, quote style, character references, self-closing tags - against one change that *is* real | none |
+| X-01 | `xml-comments/` | Plain `<!-- -->` comments added, deleted, moved, inside mixed content, and a block commented out | none |
 | TB-07 | `spanning-cells/` | Spanning cells: `namest`/`nameend` and `morerows` added, widened, removed, and edited - the grid stops matching the sibling count | none |
 
 ## Why these three

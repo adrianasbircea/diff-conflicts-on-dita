@@ -53,4 +53,4 @@ These are failures:
 
 ## Opening in Web Author
 
-See the end of `../../../2way/README-2way.md`.
+See the end of `../../../../base/2way/README-2way.md`.

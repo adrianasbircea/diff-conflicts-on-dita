@@ -51,4 +51,4 @@ in the base, and A's join makes one of B's edits belong to a paragraph that no l
 
 ## Opening in Web Author
 
-See the end of `../../../2way/README-2way.md`.
+See the end of `../../../../base/2way/README-2way.md`.

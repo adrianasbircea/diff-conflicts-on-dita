@@ -32,4 +32,4 @@ paragraph in this file conflicts, the merge granularity is the block, not the wo
 
 ## Opening in Web Author
 
-See the end of `../../../2way/README-2way.md`.
+See the end of `../../../../base/2way/README-2way.md`.

@@ -26,9 +26,6 @@
       <codeblock id="cb-untouched" xml:space="preserve">auth.token.ttl=3600
 auth.signing.key=/etc/auth/signing.pem
 auth.audit.enabled=true</codeblock>
-      <codeblock id="cb-reindented" xml:space="preserve">server:
-    port: 8443
-    tls: required</codeblock>
     </section>
   </body>
 </topic>

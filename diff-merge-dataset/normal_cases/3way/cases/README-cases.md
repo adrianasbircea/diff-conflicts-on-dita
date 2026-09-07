@@ -4,7 +4,7 @@ One directory per case, each with its own base / user-a / user-b triplet and its
 every case A and B are derived **directly and independently** from that case's base - B is never
 derived from A.
 
-Conventions are the ones from `../README-3way.md` and `../../2way/README-2way.md`: DITA topic with a
+Conventions are the ones from `../../../base/3way/README-3way.md` and `../../../base/2way/README-2way.md`: DITA topic with a
 DOCTYPE, an `@id` on every element worth referring to, Oxygen review PIs, *Ana Popescu* as user A
 and *Dan Ionescu* as user B, and a README whose tables give *Base*, *User A*, *User B* and
 *Expected*. Element ids are reused from the master base wherever the case covers the same content.

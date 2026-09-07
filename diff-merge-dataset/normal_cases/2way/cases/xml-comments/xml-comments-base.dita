@@ -5,7 +5,6 @@
   <shortdesc id="shortdesc">This topic carries plain XML comments, not Oxygen review comments, in
     every position where a comment is allowed.</shortdesc>
   <body>
-    <!-- Overview section: reviewed by the Identity team in release 4.1. -->
     <section id="sec-overview">
       <title id="title-overview">Overview</title>
       <!-- Keep this paragraph in sync with the product datasheet. -->

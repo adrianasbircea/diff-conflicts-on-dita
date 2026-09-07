@@ -8,7 +8,6 @@ show up in the diff like any other node. No review markup in either file.
 
 | ID | Location | Change | Expected |
 | --- | --- | --- | --- |
-| X-01a | before `sec-overview` | comment text modified (*release 4.1* -> *4.2*) | modified comment, one entry; not delete + insert |
 | X-01b | before `p-intro` | comment added, next to an existing one | one inserted comment; the existing one untouched |
 | X-01c | after `p-deleted-comment` | comment deleted | one deleted comment |
 | X-01d | `p-arch` | comment inside mixed content deleted (*property renamed in 4.0*) | deletion inside the paragraph, text unchanged |
@@ -19,13 +18,15 @@ show up in the diff like any other node. No review markup in either file.
 
 ## Global expectations
 
-* Comment nodes are diffed on their own, with the same granularity as text: a reworded comment is
-  one modification, not a delete plus an insert.
+* Comment nodes are diffed on their own, with the same granularity as any other node.
 * A comment inside mixed content must not force the parent paragraph to be reported as rewritten.
 * X-01g must not be reported as "text changed": the paragraph is gone and a comment appeared.
 * Merging must never move a comment across an element boundary it did not cross in either input.
 
+A comment whose text is reworded, with nothing else changing, is covered by
+`../../../../edge_cases/B7-xml-comment` and is deliberately not repeated here.
+
 ## Opening in Web Author
 
-See the end of `../../README-2way.md`, replacing the last path segment with
+See the end of `../../../../base/2way/README-2way.md`, replacing the last path segment with
 `2way%2Fcases%2Fxml-comments%2Fxml-comments-modified.dita`.

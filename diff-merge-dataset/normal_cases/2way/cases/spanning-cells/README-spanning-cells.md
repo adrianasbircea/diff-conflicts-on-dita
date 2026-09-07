@@ -40,5 +40,5 @@ No review markup in either file.
 
 ## Opening in Web Author
 
-See the end of `../../README-2way.md`, replacing the last path segment with
+See the end of `../../../../base/2way/README-2way.md`, replacing the last path segment with
 `2way%2Fcases%2Fspanning-cells%2Fspanning-cells-modified.dita`.

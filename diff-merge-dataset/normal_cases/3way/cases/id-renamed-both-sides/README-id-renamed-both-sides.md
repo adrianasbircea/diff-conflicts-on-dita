@@ -38,4 +38,4 @@ Two of the renamed ids are also link targets, so this case doubles as a referent
 
 ## Opening in Web Author
 
-See the end of `../../../2way/README-2way.md`.
+See the end of `../../../../base/2way/README-2way.md`.
