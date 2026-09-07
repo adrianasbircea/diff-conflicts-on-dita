@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="g8-admin" xml:lang="en-us">
+  <title id="g8-title">Operations</title>
+  <body>
+    <section id="g8-sec-public">
+      <title id="g8-public-title">Checking service health</title>
+      <p id="g8-p-public">Call the health endpoint to confirm that the service is running.</p>
+    </section>
+    <section id="g8-sec-admin" props="audience(administrator)" rev="internal">
+      <title id="g8-admin-title">Resetting the signing key</title>
+      <p id="g8-p-admin">Revoke the old key first, then run the key rotation job so that no
+        instance can keep issuing tokens with the retired key.</p>
+    </section>
+  </body>
+</topic>

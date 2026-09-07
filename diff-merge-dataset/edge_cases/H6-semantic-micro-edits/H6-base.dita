@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="h6-retention" xml:lang="en-us">
+  <title id="h6-title">Retention Policy</title>
+  <body>
+    <section id="h6-sec">
+      <title id="h6-sec-title">Rules</title>
+      <p id="h6-p-days">Audit records are kept for 10 days.</p>
+      <p id="h6-p-encrypt">The signing key is stored in the secret store, so it is exposed to the
+        application log.</p>
+      <p id="h6-p-modal">Operators may rotate the signing key before the certificate expires.</p>
+    </section>
+  </body>
+</topic>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="c3-mounting" xml:lang="en-us">
+  <title id="c3-title">Mounting the Bracket</title>
+  <body>
+    <section id="c3-sec-overview">
+      <title id="c3-sec-overview-title">Overview</title>
+      <fig id="c3-fig-install">
+        <title id="c3-fig-install-title">Bracket in the installed position</title>
+        <p id="c3-fig-install-p">The bracket sits flush against the rail with the tab facing up.</p>
+      </fig>
+    </section>
+    <section id="c3-sec-detail">
+      <title id="c3-sec-detail-title">Fastener detail</title>
+      <fig id="c3-fig-install">
+        <title id="c3-fig-detail-title">Fastener positions and torque</title>
+        <p id="c3-fig-detail-p">Both fasteners pass through the outer holes and are torqued to 4 Nm.</p>
+      </fig>
+    </section>
+  </body>
+</topic>

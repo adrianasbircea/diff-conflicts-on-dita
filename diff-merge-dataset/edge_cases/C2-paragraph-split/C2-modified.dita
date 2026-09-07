@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="c2-startup" xml:lang="en-us">
+  <title id="c2-title">Startup Behaviour</title>
+  <body>
+    <section id="c2-sec">
+      <title id="c2-sec-title">Reading the configuration</title>
+      <p id="c2-p">The configuration file is read once, at startup, and the values are cached for
+        the lifetime of the process.</p>
+      <p id="c2-p-restart">Restart the service after every change, because a hot reload of the
+        configuration is not supported.</p>
+    </section>
+  </body>
+</topic>

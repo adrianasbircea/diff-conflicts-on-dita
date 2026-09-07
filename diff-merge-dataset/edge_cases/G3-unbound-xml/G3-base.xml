@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serviceCatalog version="3">
+  <service id="auth" tier="critical">
+    <displayName>Authentication Service</displayName>
+    <owner team="identity" contact="identity@example.com"/>
+    <sla availability="99.95" responseMs="250"/>
+    <dependency ref="token-store" kind="hard"/>
+    <dependency ref="audit-sink" kind="soft"/>
+  </service>
+</serviceCatalog>

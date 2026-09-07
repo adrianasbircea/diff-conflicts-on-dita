@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="c4-net" xml:lang="en-us">
+  <title id="c4-title">Connecting the Console Port</title>
+  <body>
+    <section id="c4-sec-steps">
+      <title id="c4-sec-steps-title">Procedure</title>
+      <ol id="c4-ol-steps">
+        <li id="c4-step-connect">Connect the console cable to the management port.</li>
+        <li id="c4-step-verify">Verify that the link light is solid green.</li>
+        <li id="c4-step-login">Log in with the factory credentials.</li>
+      </ol>
+    </section>
+    <section id="c4-sec-notes">
+      <title id="c4-sec-notes-title">Notes</title>
+      <p id="c4-p-ref">See <xref href="#c4-net/c4-step-verify"/> for link verification details and
+        for the expected blink pattern.</p>
+    </section>
+  </body>
+</topic>

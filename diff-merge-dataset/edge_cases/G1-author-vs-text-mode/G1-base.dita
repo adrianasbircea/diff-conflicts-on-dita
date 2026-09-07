@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="g1-failover" xml:lang="en-us">
+  <title id="g1-title">Failover</title>
+  <body>
+    <section id="g1-sec">
+      <title id="g1-sec-title">Detecting an unhealthy node</title>
+      <p id="g1-p">The load balancer polls the health endpoint every ten seconds. A node
+        that fails three consecutive checks is removed from the pool and is not
+        returned to it until two checks in a row succeed.</p>
+    </section>
+  </body>
+</topic>

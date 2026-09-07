@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="a1-cache" xml:lang="en-us">
+  <title id="a1-title">Cache Settings</title>
+  <body>
+    <section id="a1-sec">
+      <title id="a1-sec-title">Entry lifetime</title>
+      <p id="a1-p-lead">Cached entries are evicted when they exceed the configured lifetime.</p>
+      <p id="a1-p-detail">The eviction thread runs every 30 seconds and removes every entry whose
+        age is greater than <codeph>cache.entry.ttl</codeph>.</p>
+    </section>
+  </body>
+</topic>

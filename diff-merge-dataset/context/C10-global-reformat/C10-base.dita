@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="c10-backup" xml:lang="en-us">
+  <title id="c10-title">Scheduled Backups</title>
+  <body>
+    <section id="c10-sec-run">
+      <title id="c10-sec-run-title">Running a backup</title>
+      <p id="c10-p-run" audience="admin" platform="linux">Run the setup script from the installation
+        directory. The script writes a full snapshot to the configured target.</p>
+      <p id="c10-p-window" audience="admin" platform="linux">Backups start at 02:00 and must finish
+        inside the two-hour maintenance window.</p>
+    </section>
+    <section id="c10-sec-retain">
+      <title id="c10-sec-retain-title">Retention</title>
+      <p id="c10-p-keep" outputclass="policy" audience="admin">Snapshots older than 30 days are
+        deleted automatically.</p>
+    </section>
+  </body>
+</topic>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="h3-restart" xml:lang="de-de">
+  <title id="h3-title">Dienst neu starten</title>
+  <body>
+    <section id="h3-sec">
+      <title id="h3-sec-title">Vorgehen</title>
+      <p id="h3-p">Beenden Sie den Dienst, übernehmen Sie die neue Konfiguration und starten Sie ihn
+        erneut. Der Dienst benötigt etwa zehn Sekunden, bis er verfügbar ist.</p>
+    </section>
+  </body>
+</topic>

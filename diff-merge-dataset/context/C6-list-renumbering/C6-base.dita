@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="c6-modules" xml:lang="en-us">
+  <title id="c6-title">Adding an Expansion Module</title>
+  <body>
+    <section id="c6-sec-proc">
+      <title id="c6-sec-proc-title">Procedure</title>
+      <ol id="c6-ol-steps">
+        <li id="c6-step-1">Power down the chassis and wait for the fans to stop.</li>
+        <li id="c6-step-2">Remove the blanking plate from the target bay.</li>
+        <li id="c6-step-3">Slide the module in until the connector engages.</li>
+        <li id="c6-step-4">Tighten the captive screw on the module faceplate.</li>
+        <li id="c6-step-5">Power up the chassis.</li>
+        <li id="c6-step-6">Confirm that the module appears in the inventory list.</li>
+      </ol>
+    </section>
+    <section id="c6-sec-more">
+      <title id="c6-sec-more-title">Additional modules</title>
+      <p id="c6-p-repeat">Repeat steps 4 through 6 for each additional module.</p>
+    </section>
+  </body>
+</topic>

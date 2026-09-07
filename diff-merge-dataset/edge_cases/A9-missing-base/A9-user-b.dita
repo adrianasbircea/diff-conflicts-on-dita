@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="a9-tokens" xml:lang="en-us">
+  <title id="a9-title">Token Lifetime</title>
+  <body>
+    <section id="a9-sec">
+      <title id="a9-sec-title">Expiry</title>
+      <p id="a9-p-ttl">Access tokens expire after 30 minutes. Clients should refresh the token
+        before it expires rather than retrying a rejected request.</p>
+    </section>
+  </body>
+</topic>

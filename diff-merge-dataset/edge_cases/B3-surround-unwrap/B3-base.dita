@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="b3-ui" xml:lang="en-us">
+  <title id="b3-title">Confirming the Dialog</title>
+  <body>
+    <section id="b3-sec">
+      <title id="b3-sec-title">Steps</title>
+      <p id="b3-p">Press OK to continue, or Cancel to discard the changes.</p>
+    </section>
+  </body>
+</topic>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="c13-errors" xml:lang="en-us">
+  <title id="c13-title">Handling Request Errors</title>
+  <body>
+    <section id="c13-sec-errors">
+      <title id="c13-sec-errors-title">Error responses</title>
+      <p id="c13-p-codes">The service answers with 429 when a client exceeds its rate limit.</p>
+      <p id="c13-p-log">Every rejected request is written to the audit log.</p>
+    </section>
+    <section id="c13-sec-retry">
+      <title id="c13-sec-retry-title">Retry policy</title>
+      <p id="c13-p-retry-policy">Clients must retry with exponential backoff, starting at one second
+        and doubling up to a maximum of 60 seconds.</p>
+      <p id="c13-p-retry-jitter">Add random jitter of up to 200 ms to each interval so that clients
+        do not retry in lockstep.</p>
+    </section>
+  </body>
+</topic>

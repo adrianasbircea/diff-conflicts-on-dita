@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="h1-tokens-ar" xml:lang="ar">
+  <title id="h1-title">مدة صلاحية الرمز</title>
+  <body>
+    <section id="h1-sec">
+      <title id="h1-sec-title">انتهاء الصلاحية</title>
+      <p id="h1-p">تنتهي صلاحية رموز الوصول بعد ثلاثين دقيقة. يجب على العميل تجديد الرمز قبل انتهاء
+        صلاحيته بدلاً من إعادة إرسال الطلب المرفوض، مع احترام الرأس
+        <codeph>Retry-After</codeph> في الاستجابة.</p>
+    </section>
+  </body>
+</topic>

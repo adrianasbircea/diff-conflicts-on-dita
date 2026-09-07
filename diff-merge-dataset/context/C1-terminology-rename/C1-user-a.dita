@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="c1-install" xml:lang="en-us">
+  <title id="c1-title">Installing the Device</title>
+  <body>
+    <section id="c1-sec-prep">
+      <title id="c1-sec-prep-title">Preparation</title>
+      <p id="c1-p-unpack">Unpack the Device and check it against the packing list.</p>
+      <p id="c1-p-inspect">Inspect the Device for shipping damage before you power it on.</p>
+      <p id="c1-p-tools">Keep the Device on a static-free surface while you work.</p>
+    </section>
+    <section id="c1-sec-fit">
+      <title id="c1-sec-fit-title">Fitting</title>
+      <p id="c1-p-insert">Insert the Device into the slot.</p>
+      <p id="c1-p-seat">Confirm that the Device is fully seated before you close the panel.</p>
+      <p id="c1-p-screw">Tighten the two retaining screws that hold the Device in place.</p>
+    </section>
+    <section id="c1-sec-verify">
+      <title id="c1-sec-verify-title">Verification</title>
+      <p id="c1-p-power">Power on the Device and wait for the status light to turn green.</p>
+      <p id="c1-p-check">If the Device does not respond, repeat the fitting procedure.</p>
+    </section>
+  </body>
+</topic>

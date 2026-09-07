@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="c7-reference" xml:lang="en-us">
+  <title id="c7-title">Default Configuration</title>
+  <body>
+    <section id="c7-sec">
+      <title id="c7-sec-title">auth-service.properties</title>
+      <codeblock id="c7-cb" xml:space="preserve">auth.signing.key=file:/etc/auth/signing.pem
+auth.signing.algorithm=RS256
+auth.token.ttl=3600
+auth.token.refresh.ttl=86400
+auth.token.issuer=https://auth.example.com
+auth.session.enabled=true
+auth.session.timeout=1800
+auth.ratelimit.enabled=true
+auth.ratelimit.requests=600
+auth.ratelimit.burst=50
+auth.ratelimit.window=60
+db.pool.min=10
+db.pool.max=200
+db.pool.timeout=5000
+db.schema.revision=42
+db.statement.timeout=15000
+http.port=8443
+http.tls.enabled=true
+http.tls.protocol=TLSv1.2
+http.tls.ciphers=default
+http.compression=false
+http.max.header.size=8192
+log.level=INFO
+log.audit.enabled=false
+log.audit.retention.days=30
+log.format=text
+cache.entry.ttl=300
+cache.max.entries=10000
+cache.eviction.interval=30
+metrics.enabled=false
+metrics.port=9090
+metrics.prefix=auth
+health.path=/healthz
+health.timeout=2000</codeblock>
+    </section>
+  </body>
+</topic>

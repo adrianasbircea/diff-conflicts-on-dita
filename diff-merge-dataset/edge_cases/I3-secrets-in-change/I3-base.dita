@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="i3-quickstart" xml:lang="en-us">
+  <title id="i3-title">Quick Start</title>
+  <body>
+    <section id="i3-sec">
+      <title id="i3-sec-title">First request</title>
+      <codeblock id="i3-cb" xml:space="preserve">curl -X POST https://auth.example.com/v1/token \
+  -H "Content-Type: application/json" \
+  -d '{"client_id":"demo-client","client_secret":"REPLACE_WITH_YOUR_SECRET"}'</codeblock>
+    </section>
+  </body>
+</topic>

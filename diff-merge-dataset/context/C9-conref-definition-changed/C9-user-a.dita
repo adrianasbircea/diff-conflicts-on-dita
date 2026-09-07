@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="c9-launch" xml:lang="en-us">
+  <title id="c9-title">Launching the Application</title>
+  <body>
+    <section id="c9-sec-names" outputclass="reuse-library">
+      <title id="c9-sec-names-title">Reusable phrases</title>
+      <p id="c9-p-names">Product name: <ph id="c9-ph-prod">Acme Publisher Pro</ph></p>
+    </section>
+    <section id="c9-sec-launch">
+      <title id="c9-sec-launch-title">Starting and stopping</title>
+      <p id="c9-p-launch">Launch <ph conref="#c9-launch/c9-ph-prod"/> from the Start menu or from
+        the desktop shortcut.</p>
+      <p id="c9-p-splash">The splash screen for <ph conref="#c9-launch/c9-ph-prod"/> stays up while
+        the workspace is restored.</p>
+      <p id="c9-p-close">Close <ph conref="#c9-launch/c9-ph-prod"/> from the File menu, not from the
+        window controls.</p>
+    </section>
+  </body>
+</topic>

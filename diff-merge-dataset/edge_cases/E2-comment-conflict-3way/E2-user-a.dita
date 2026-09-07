@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="e2-limits" xml:lang="en-us">
+  <title id="e2-title">Connection Pool</title>
+  <body>
+    <section id="e2-sec">
+      <title id="e2-sec-title">Sizing</title>
+      <p id="e2-p">The pool opens at most <?oxy_comment_start author="Ana Popescu" timestamp="20260903T104000+0300" comment="200 is the value for the small profile only. Should we document the profile here?" id="cmt-e2-a"?>200<?oxy_comment_end?> connections. Requests wait up to five seconds for a
+        free connection before they fail.</p>
+    </section>
+  </body>
+</topic>

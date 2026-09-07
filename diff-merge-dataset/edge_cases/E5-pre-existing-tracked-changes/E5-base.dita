@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="e5-prereq" xml:lang="en-us">
+  <title id="e5-title">Prerequisites</title>
+  <body>
+    <section id="e5-sec">
+      <title id="e5-sec-title">Before you start</title>
+      <ul id="e5-ul">
+        <li id="e5-li-jdk">A JDK 21 runtime<?oxy_insert_start author="Ana Popescu" timestamp="20260903T103500+0300"?> or later<?oxy_insert_end?> is installed on the host.</li>
+        <li id="e5-li-port">Port 8443 is open for inbound TLS traffic.</li>
+      </ul>
+    </section>
+  </body>
+</topic>

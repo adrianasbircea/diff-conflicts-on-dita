@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="c8-cache" xml:lang="en-us">
+  <title id="c8-title">Cache Configuration</title>
+  <body>
+    <section id="c8-sec-basics">
+      <title id="c8-sec-basics-title">Basic settings</title>
+      <p id="c8-p-size">The cache holds 10 000 entries by default.</p>
+      <p id="c8-p-pointer">For larger deployments, see <xref href="#c8-cache/c8-sec-tuning"/>.</p>
+    </section>
+    <section id="c8-sec-tuning">
+      <title id="c8-sec-tuning-title">Tuning for large deployments</title>
+      <p id="c8-p-tune-1">Raise the entry ceiling to 100 000 on hosts with more than 16 GB of
+        memory.</p>
+      <p id="c8-p-tune-2">Shorten the eviction interval to 10 seconds when the hit rate drops below
+        80 percent.</p>
+    </section>
+    <section id="c8-sec-monitor">
+      <title id="c8-sec-monitor-title">Monitoring</title>
+      <p id="c8-p-monitor">The hit rate is exported as <codeph>cache.hit.ratio</codeph>.</p>
+    </section>
+  </body>
+</topic>

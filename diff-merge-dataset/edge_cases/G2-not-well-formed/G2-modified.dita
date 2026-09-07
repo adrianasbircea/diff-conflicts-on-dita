@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="g2-broken" xml:lang="en-us">
+  <title id="g2-title">Troubleshooting</title>
+  <body>
+    <section id="g2-sec">
+      <title id="g2-sec-title">Common errors</title>
+      <p id="g2-p-401">A 401 response means the signature could not be verified. Check that the
+        client and the service use the same signing key.</p>
+      <p id="g2-p-503">A 503 response means the token store is unreachable. Retry with backoff.
+    </section>
+  </body>
+</topic>

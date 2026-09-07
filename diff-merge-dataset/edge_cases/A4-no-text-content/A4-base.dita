@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="a4-diagram" xml:lang="en-us">
+  <title id="a4-title">Deployment Diagram</title>
+  <body>
+    <section id="a4-sec">
+      <title id="a4-sec-title">Single-zone deployment</title>
+      <image id="a4-img" href="images/deploy-single-zone.png" placement="break" scale="80"/>
+    </section>
+  </body>
+</topic>

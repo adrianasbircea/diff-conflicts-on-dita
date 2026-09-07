@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="a6-tokens" xml:lang="en-us">
+  <title id="a6-title">What an Access Token Is</title>
+  <shortdesc id="a6-shortdesc">An access token is a signed statement that a client has been
+    authenticated and may call the API on behalf of a user.</shortdesc>
+  <body id="a6-body">
+    <p id="a6-p">The token carries the subject, the audience and an expiry claim. The service
+      verifies the signature on every request and rejects a token whose expiry has passed.</p>
+  </body>
+</topic>

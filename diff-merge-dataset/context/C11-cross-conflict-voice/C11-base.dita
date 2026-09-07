@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="c11-import" xml:lang="en-us">
+  <title id="c11-title">Importing a Data Set</title>
+  <body>
+    <section id="c11-sec-proc">
+      <title id="c11-sec-proc-title">Procedure</title>
+      <p id="c11-p-1">The operator selects Import from the File menu.</p>
+      <p id="c11-p-2">The operator then chooses the source folder in the dialog.</p>
+      <p id="c11-p-3">The system validates each file and reports the errors it finds.</p>
+      <p id="c11-p-4">The operator confirms the import and waits for the summary.</p>
+    </section>
+  </body>
+</topic>

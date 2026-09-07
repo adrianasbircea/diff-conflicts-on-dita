@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="d3-sample" xml:lang="en-us">
+  <title id="d3-title">Client Sample</title>
+  <body>
+    <section id="d3-sec">
+      <title id="d3-sec-title">Requesting a token</title>
+      <codeblock id="d3-cb" xml:space="preserve">def request_token(client_id, secret):
+    payload = {
+        "client_id": client_id,
+        "client_secret": secret,
+        "grant_type": "client_credentials",
+    }
+    response = session.post(TOKEN_URL, json=payload, timeout=5)
+    response.raise_for_status()
+    return response.json()["access_token"]</codeblock>
+    </section>
+  </body>
+</topic>

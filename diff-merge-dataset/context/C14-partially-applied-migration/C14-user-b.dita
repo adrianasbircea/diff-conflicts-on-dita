@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="c14-ports" xml:lang="en-us">
+  <title id="c14-title">Network Ports</title>
+  <body>
+    <section id="c14-sec-endpoints">
+      <title id="c14-sec-endpoints-title">Listening ports</title>
+      <p id="c14-p-admin">The admin console listens on port 8443.</p>
+      <p id="c14-p-api">The REST API listens on port 8443.</p>
+      <p id="c14-p-health">The health probe is served on port 8443 and answers only to requests from
+        the management subnet.</p>
+      <p id="c14-p-metrics">Metrics are exposed on port 8443 in Prometheus text format.</p>
+      <p id="c14-p-firewall">Open port 8443 for inbound TLS traffic, and close it again once the
+        migration is complete.</p>
+    </section>
+  </body>
+</topic>

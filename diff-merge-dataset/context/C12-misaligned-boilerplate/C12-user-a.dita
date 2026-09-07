@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="c12-reports" xml:lang="en-us">
+  <title id="c12-title">Generating Reports</title>
+  <body>
+    <section id="c12-sec-daily">
+      <title id="c12-sec-daily-title">Daily report</title>
+      <p id="c12-p-daily">The daily report covers the previous calendar day.</p>
+      <p outputclass="disclaimer">Figures in this report are provisional. Confirm them against the
+        audited ledger before publication.</p>
+    </section>
+    <section id="c12-sec-weekly">
+      <title id="c12-sec-weekly-title">Weekly report</title>
+      <p id="c12-p-weekly">The weekly report covers the seven days ending on Sunday.</p>
+      <p outputclass="disclaimer">Figures in this report are provisional. Confirm them against the
+        audited ledger before publication or distribution.</p>
+    </section>
+    <section id="c12-sec-monthly">
+      <title id="c12-sec-monthly-title">Monthly report</title>
+      <p id="c12-p-monthly">The monthly report covers a full calendar month.</p>
+      <p outputclass="disclaimer">Figures in this report are provisional. Confirm them against the
+        audited ledger before publication.</p>
+    </section>
+  </body>
+</topic>
