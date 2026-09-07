@@ -12,8 +12,7 @@
       <note id="note-warn" type="warning"><?oxy_comment_start author="Dan Ionescu" timestamp="20260903T151000+0300" comment="Mention the secret store as the recommended alternative." id="cmt-1"?><?oxy_comment_start author="Ana Popescu" timestamp="20260903T151100+0300" comment="Reply from B's branch: the secret store topic is not written yet." parentID="cmt-1" mid="1"?>Never
         commit the signing key to the
         repository.<?oxy_comment_end mid="1"?><?oxy_comment_end?></note>
-      <?oxy_comment_start author="Dan Ionescu" timestamp="20260903T151200+0300" comment="Comment from B's branch on the configuration paragraph." id="cmt-3"?><p
-        id="p-config-lead">The configuration file is read once, at startup.</p><?oxy_comment_end?>
+      <p id="p-config-lead">The configuration file is read once, at startup.</p>
       <ul id="ul-prereq">
         <li id="li-prereq-1">A JDK 21 runtime is installed on the host.</li>
         <li id="li-prereq-2">The database schema is migrated to revision 42.</li>
@@ -26,8 +25,7 @@
           <tbody>
             <row id="row-sec">
               <entry colname="c1" id="e-sec-name">Transport security</entry>
-              <?oxy_comment_start author="Dan Ionescu" timestamp="20260903T151300+0300" comment="Is this still Active in 4.2, or Deprecated?" id="cmt-2"?><entry
-                colname="c2" id="e-sec-status">Active</entry><?oxy_comment_end?>
+              <entry colname="c2" id="e-sec-status">Active</entry>
             </row>
           </tbody>
         </tgroup>

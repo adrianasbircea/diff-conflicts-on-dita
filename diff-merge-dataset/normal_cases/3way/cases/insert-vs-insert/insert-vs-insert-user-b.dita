@@ -16,13 +16,10 @@
     <section id="sec-config">
       <title id="title-config">Configuring the service</title>
       <p id="p-config-lead">The configuration file is read once, at startup.</p>
-      <note id="note-restart" type="important">The service must be restarted after every change to
-        the configuration file.</note>
       <ul id="ul-prereq">
         <li id="li-prereq-1">A JDK 21 runtime is installed on the host.</li>
         <li id="li-prereq-2">The database schema is migrated to revision 42.</li>
         <li id="li-prereq-3">Port 8443 is open for inbound TLS traffic.</li>
-        <li id="li-prereq-4">The audit collector is reachable on port 9443.</li>
       </ul>
       <table id="table-limits" frame="all">
         <title id="title-limits">Limits</title>
@@ -43,10 +40,6 @@
             <row id="row-lim-rate">
               <entry colname="l1" id="e-lim-rate-name">Requests per minute</entry>
               <entry colname="l2" id="e-lim-rate-def">600</entry>
-            </row>
-            <row id="row-lim-clock">
-              <entry colname="l1" id="e-lim-clock-name">Clock skew</entry>
-              <entry colname="l2" id="e-lim-clock-def">30</entry>
             </row>
           </tbody>
         </tgroup>

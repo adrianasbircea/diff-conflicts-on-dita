@@ -9,7 +9,7 @@
             <p outputclass='lead' id="p-intro">The Authentication Service validates user
                 credentials and issues signed access tokens. It runs as a stateless
                 component and can be scaled horizontally behind a load balancer.</p>
-            <p outputclass="architecture" id="p-arch">Tokens are signed with the key configured in <codeph>auth.signing.key</codeph>.  The service keeps no session data on the local disk, so any instance can serve any request.</p>
+            <p outputclass="architecture" id="p-arch">Tokens are signed with the key configured in <codeph>auth.signing.key</codeph>. The service keeps no session data on the local disk, so any instance can serve any request.</p>
             <p id="p-nbsp">The default handshake timeout is <codeph>30&#xA0;s</codeph> and cannot
                 be set to zero.</p>
             <p id="p-link">The full parameter list is documented in the <xref href="https://example.com/docs?product=auth&#38;view=reference" format="html" scope="external">reference guide</xref>.</p>

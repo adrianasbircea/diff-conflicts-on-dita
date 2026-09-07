@@ -64,10 +64,6 @@
               <entry colname="l1" id="e-lim-rate-name">Requests per minute</entry>
               <entry colname="l2" id="e-lim-rate-def">600</entry>
             </row>
-            <row id="row-lim-burst">
-              <entry colname="l1" id="e-lim-burst-name">Burst size</entry>
-              <entry colname="l2" id="e-lim-burst-def">50</entry>
-            </row>
           </tbody>
         </tgroup>
       </table>

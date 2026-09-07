@@ -13,9 +13,6 @@
           href="#cf-19-xref-target-deleted/li-prereq-2" format="dita">the prerequisites</xref>.</p>
       <p id="p-see-stable">The endpoints are listed in <xref
           href="#cf-19-xref-target-deleted/sec-endpoints" format="dita">Endpoints</xref>.</p>
-      <p id="p-see-new">The per-tenant quotas are also described in <xref
-          href="#cf-19-xref-target-deleted/p-limits" format="dita">the limits
-        section</xref>.</p>
       <ul id="ul-prereq">
         <li id="li-prereq-1">A JDK 21 runtime is installed on the host.</li>
         <li id="li-prereq-2">The database schema is migrated to revision 42.</li>

@@ -9,11 +9,12 @@
       <title id="title-overview">Overview</title>
       <p id="p-intro">The Authentication Service authenticates the user and returns signed access
         tokens.</p>
-      <p id="p-arch">The service keeps no session data on the local file system.</p>
+      <p id="p-arch">The service keeps no session data on the local disk.</p>
     </section>
     <section id="sec-config">
       <title id="title-config">Configuring the service</title>
       <ol id="ol-steps">
+        <li id="li-step-1">Stop the running service instance.</li>
         <li id="li-step-2">Start the service and check the health endpoint.</li>
       </ol>
       <table id="table-limits" frame="all">
@@ -24,7 +25,7 @@
           <tbody>
             <row id="row-lim-ttl">
               <entry colname="l1" id="e-lim-ttl-name">Token TTL</entry>
-              <entry colname="l2" id="e-lim-ttl-def">1800</entry>
+              <entry colname="l2" id="e-lim-ttl-def">3600</entry>
             </row>
           </tbody>
         </tgroup>
@@ -32,8 +33,7 @@
     </section>
     <section id="sec-trouble">
       <title id="title-trouble">Troubleshooting</title>
-      <p id="p-trouble">Collect the audit archive and the metrics snapshot before opening a
-        ticket.</p>
+      <p id="p-trouble">Collect the audit log and the metrics snapshot before opening a ticket.</p>
     </section>
   </body>
 </topic>

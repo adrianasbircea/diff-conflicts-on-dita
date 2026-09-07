@@ -19,7 +19,7 @@
               <entry colname="e1" id="e-ep-head-1">Endpoint</entry>
               <entry colname="e2" id="e-ep-head-2">Method</entry>
               <entry colname="e3" id="e-ep-head-3">Description</entry>
-              <entry colname="e4" id="e-ep-head-4">Since</entry>
+              <entry colname="e4" id="e-ep-head-since">Since</entry>
             </row>
           </thead>
           <tbody>
@@ -46,27 +46,23 @@
       </table>
       <table id="table-limits" frame="all">
         <title id="title-table-limits">Limits</title>
-        <tgroup cols="3">
+        <tgroup cols="2">
           <colspec colname="l1" colnum="1" colwidth="2*"/>
           <colspec colname="l2" colnum="2" colwidth="1*"/>
-          <colspec colname="l3" colnum="3" colwidth="2*"/>
           <thead>
             <row id="row-lim-head">
               <entry colname="l1" id="e-lim-head-1">Limit</entry>
               <entry colname="l2" id="e-lim-head-2">Default</entry>
-              <entry colname="l3" id="e-lim-head-3">Notes</entry>
             </row>
           </thead>
           <tbody>
             <row id="row-lim-ttl">
               <entry colname="l1" id="e-lim-ttl-name">Token TTL</entry>
               <entry colname="l2" id="e-lim-ttl-def">3600</entry>
-              <entry colname="l3" id="e-lim-ttl-notes">In seconds.</entry>
             </row>
             <row id="row-lim-rate">
               <entry colname="l1" id="e-lim-rate-name">Requests per minute</entry>
               <entry colname="l2" id="e-lim-rate-def">600</entry>
-              <entry colname="l3" id="e-lim-rate-notes">Per client identifier.</entry>
             </row>
           </tbody>
         </tgroup>

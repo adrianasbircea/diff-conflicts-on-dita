@@ -7,13 +7,13 @@
   <body>
     <section id="sec-overview">
       <title id="title-overview">Overview</title>
-      <p id="p-architecture" outputclass="architecture">Tokens are signed with the key configured in
+      <p id="p-arch" outputclass="architecture">Tokens are signed with the key configured in
         <codeph>auth.signing.key</codeph>.</p>
       <p id="p-see">The service limits are described in <xref
           href="#cf-18-id-changed-both/sec-rate-limits" format="dita">Limits</xref>.</p>
       <ul id="ul-prereq">
         <li id="li-prereq-1">A JDK 21 runtime is installed on the host.</li>
-        <li id="li-schema">The database schema is migrated to revision 42.</li>
+        <li id="li-prereq-2">The database schema is migrated to revision 42.</li>
       </ul>
     </section>
     <section id="sec-rate-limits">

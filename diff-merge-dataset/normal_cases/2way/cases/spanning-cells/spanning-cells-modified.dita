@@ -27,16 +27,15 @@
               <entry colname="c3" id="e-merge-status">Active</entry>
             </row>
             <row id="row-widen">
-              <entry namest="c1" nameend="c3" id="e-widen-span">Token issuance and renewal</entry>
+              <entry namest="c1" nameend="c2" id="e-widen-span">Token issuance and renewal</entry>
+              <entry colname="c3" id="e-widen-status">Active</entry>
             </row>
             <row id="row-keep">
-              <entry namest="c1" nameend="c2" id="e-keep-span">Audit log shipping to the
-                collector</entry>
+              <entry namest="c1" nameend="c2" id="e-keep-span">Audit log shipping</entry>
               <entry colname="c3" id="e-keep-status">Planned</entry>
             </row>
             <row id="row-split-h">
-              <entry colname="c1" id="e-split-name">Rate limiting</entry>
-              <entry colname="c2" id="e-split-desc">Quotas per client.</entry>
+              <entry namest="c1" nameend="c2" id="e-split-span">Rate limiting and quotas</entry>
               <entry colname="c3" id="e-split-status">Beta</entry>
             </row>
           </tbody>
@@ -60,26 +59,26 @@
           </thead>
           <tbody>
             <row id="row-v1">
-              <entry colname="m1" id="e-v-session">Session APIs</entry>
+              <entry colname="m1" morerows="1" id="e-v-session">Session APIs</entry>
               <entry colname="m2" id="e-v1-method">POST</entry>
               <entry colname="m3" id="e-v1-notes">Creates a session.</entry>
             </row>
             <row id="row-v2">
-              <entry colname="m1" id="e-v2-group">Session APIs</entry>
               <entry colname="m2" id="e-v2-method">DELETE</entry>
               <entry colname="m3" id="e-v2-notes">Ends a session.</entry>
             </row>
             <row id="row-v3">
-              <entry colname="m1" morerows="1" id="e-v3-group">Token APIs</entry>
+              <entry colname="m1" id="e-v3-group">Token APIs</entry>
               <entry colname="m2" id="e-v3-method">POST</entry>
               <entry colname="m3" id="e-v3-notes">Issues a token.</entry>
             </row>
             <row id="row-v4">
+              <entry colname="m1" id="e-v4-group">Token APIs</entry>
               <entry colname="m2" id="e-v4-method">GET</entry>
               <entry colname="m3" id="e-v4-notes">Introspects a token.</entry>
             </row>
             <row id="row-v5">
-              <entry colname="m1" morerows="2" id="e-v-admin">Admin APIs</entry>
+              <entry colname="m1" morerows="1" id="e-v-admin">Admin APIs</entry>
               <entry colname="m2" id="e-v5-method">POST</entry>
               <entry colname="m3" id="e-v5-notes">Rotates the signing key.</entry>
             </row>
@@ -88,6 +87,7 @@
               <entry colname="m3" id="e-v6-notes">Reads the current key id.</entry>
             </row>
             <row id="row-v7">
+              <entry colname="m1" id="e-v7-group">Admin APIs</entry>
               <entry colname="m2" id="e-v7-method">DELETE</entry>
               <entry colname="m3" id="e-v7-notes">Revokes a key.</entry>
             </row>

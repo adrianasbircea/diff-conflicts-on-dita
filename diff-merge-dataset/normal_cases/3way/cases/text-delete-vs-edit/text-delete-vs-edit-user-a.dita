@@ -7,11 +7,12 @@
   <body>
     <section id="sec-trouble">
       <title id="title-trouble">Troubleshooting</title>
-      <p id="p-del-sentence">The service writes an audit record for every login. Records are rotated
-        daily.</p>
+      <p id="p-del-sentence">The service writes an audit record for every login. The record
+        contains the client IP address. Records are rotated daily.</p>
       <p id="p-del-overlap">Collect before opening a ticket.</p>
-      <p id="p-del-neighbour">Attach the thread dump to the ticket.</p>
+      <p id="p-del-neighbour">Attach the metrics snapshot and the thread dump to the ticket.</p>
       <ul id="ul-checks">
+        <li id="li-del">Check that the signing key is readable by the service user.</li>
         <li id="li-keep">Check that port 8443 is reachable from the load balancer.</li>
       </ul>
       <table id="table-limits" frame="all">
@@ -28,7 +29,7 @@
           <tbody>
             <row id="row-lim-rate">
               <entry colname="l1" id="e-lim-rate-name">Requests per minute</entry>
-              <entry colname="l2" id="e-lim-rate-notes"/>
+              <entry colname="l2" id="e-lim-rate-notes">Counted per client identifier.</entry>
             </row>
           </tbody>
         </tgroup>

@@ -11,12 +11,10 @@
         id="p-intro">The Authentication Service validates user credentials and issues signed access
         tokens.</p><?oxy_comment_end mid="1"?><?oxy_comment_end?>
       <note id="note-warn" type="warning">Never commit the signing key to the repository.</note>
-      <?oxy_comment_start author="Ana Popescu" timestamp="20260903T150200+0300" comment="Comment from A's branch on the configuration paragraph." id="cmt-3"?><p
-        id="p-config-lead">The configuration file is read once, at startup.</p><?oxy_comment_end?>
+      <p id="p-config-lead">The configuration file is read once, at startup.</p>
       <ul id="ul-prereq">
         <li id="li-prereq-1">A JDK 21 runtime is installed on the host.</li>
-        <li id="li-prereq-2"><?oxy_comment_start author="Ana Popescu" timestamp="20260903T150300+0300" comment="The revision number changes every release, use a variable." id="cmt-2"?>The
-          database schema is migrated to revision 42.<?oxy_comment_end?></li>
+        <li id="li-prereq-2">The database schema is migrated to revision 42.</li>
       </ul>
       <table id="table-features" frame="all">
         <title id="title-features">Features</title>

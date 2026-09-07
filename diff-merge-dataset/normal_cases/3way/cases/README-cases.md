@@ -2,48 +2,54 @@
 
 One directory per case, each with its own base / user-a / user-b triplet and its own README. In
 every case A and B are derived **directly and independently** from that case's base - B is never
-derived from A.
+derived from A. **Each triplet contains exactly one change per side**, so a failure points straight
+at one behaviour.
 
-Conventions are the ones from `../../../base/3way/README-3way.md` and `../../../base/2way/README-2way.md`: DITA topic with a
-DOCTYPE, an `@id` on every element worth referring to, Oxygen review PIs, *Ana Popescu* as user A
-and *Dan Ionescu* as user B, and a README whose tables give *Base*, *User A*, *User B* and
-*Expected*. Element ids are reused from the master base wherever the case covers the same content.
+Conventions are the ones from `../../../base/3way/README-3way.md` and
+`../../../base/2way/README-2way.md`: DITA topic with a DOCTYPE, an `@id` on every element worth
+referring to, Oxygen review PIs where a case needs them, *Ana Popescu* as user A and *Dan Ionescu*
+as user B, and a README that states the change and what counts as a pass. Element ids are reused
+from the master base wherever the case covers the same content.
 
 Case ids continue the master numbering: `CF-` for conflicts (the master set ends at CF-10), `ID-`
 for changes that are identical on both sides and must **not** conflict (the master set ends at
 ID-03).
 
+Three cases carry one extra edit beyond the case itself, and say so in their README: ID-04 and ID-05
+need it because both sides make the same change and the two files would otherwise be identical, and
+CF-25 carries `<?oxy_options track_changes="on"?>` on the side that has track changes on.
+
 ## Structure and text
 
 | Case | Directory | A does | B does | Expect |
 | --- | --- | --- | --- | --- |
-| CF-11 | `reformat-vs-edit/` | reformats the file, no content change | edits content, keeps the formatting | no conflict at all |
-| CF-12 | `insert-vs-insert/` | inserts a paragraph, a list item, a table row | inserts different ones at the same anchors | conflicts, plus one `@id` collision and one identical insertion that must not duplicate |
-| ID-04 | `delete-vs-delete/` | deletes five things | deletes the same five | no conflict |
-| CF-13 | `wrap-vs-edit/` | wraps and unwraps, block and inline | edits the text inside | four clean merges, one conflict |
-| CF-14 | `split-vs-edit/` | splits and joins blocks | edits text across the boundaries | B's edits must land in the right block |
-| CF-15 | `adjacent-word-edits/` | edits one word per sentence | edits a different word in the same sentence | one conflict only, the control case |
-| CF-16 | `text-delete-vs-edit/` | removes fragments | edits words inside them | narrow conflicts, not whole-block ones |
+| CF-11 | `reformat-vs-edit/` | reformats the file, no content change | edits one word | no conflict at all |
+| CF-12 | `insert-vs-insert/` | inserts a paragraph | inserts a different one at the same anchor | conflict, or both kept in a stated order |
+| ID-04 | `delete-vs-delete/` | deletes a list item | deletes the same item | no conflict |
+| CF-13 | `wrap-vs-edit/` | wraps two paragraphs into a new section | edits the text inside one of them | clean merge, B's edit survives the wrap |
+| CF-14 | `split-vs-edit/` | splits a paragraph in two | edits a sentence on each side of the split point | both edits land in the right block |
+| CF-15 | `adjacent-word-edits/` | edits word 4 of a sentence | edits word 10 of the same sentence | clean merge - the granularity test |
+| CF-16 | `text-delete-vs-edit/` | removes a phrase | edits words inside it | one narrow conflict, not a whole-block one |
 
 ## Attributes, identity and references
 
 | Case | Directory | A does | B does | Expect |
 | --- | --- | --- | --- | --- |
-| ID-05 | `same-attribute-value/` | six attribute changes | the same six, same values | no conflict |
-| CF-17 | `attribute-delete-vs-edit/` | removes attributes | changes their values, and the reverse | one conflict per attribute, one clean merge on the same element |
-| CF-18 | `id-renamed-both-sides/` | renames ids and its own `@href` | renames the same ids differently, and edits inside | subtree matching must survive the rename |
-| CF-19 | `link-target-deleted/` | works on the links | deletes what they point at | merges with no conflict and three broken links, which must be reported |
-| CF-20 | `column-vs-column/` | adds a column | adds a different column, and a row to the other table | the merged table must stay a valid grid |
+| ID-05 | `same-attribute-value/` | sets `@frame` to `topbot` | sets the same attribute to the same value | no conflict |
+| CF-17 | `attribute-delete-vs-edit/` | removes `@outputclass` | changes its value | one conflict, on that attribute alone |
+| CF-18 | `id-renamed-both-sides/` | renames a section id and its `@href` | renames it differently, and edits inside | subtree matching must survive the rename |
+| CF-19 | `link-target-deleted/` | edits the link text | deletes what it points at | merges with no conflict and one broken link, which must be reported |
+| CF-20 | `column-vs-column/` | adds a column | adds a different column | the merged table must stay a valid grid |
 
 ## Review markup
 
 | Case | Directory | A does | B does | Expect |
 | --- | --- | --- | --- | --- |
-| CF-21 | `accept-vs-reject/` | accepts every tracked change in the base | rejects every one | five conflicts; **the only case whose base already has review markup** |
-| CF-22 | `same-range-comments/` | comments five ranges | comments the same ranges | both threads survive, PIs well nested |
+| CF-21 | `accept-vs-reject/` | accepts the tracked change in the base | rejects it | one conflict; **the only case whose base already has review markup** |
+| CF-22 | `same-range-comments/` | comments a paragraph | comments the same range | both threads survive, PIs well nested |
 | CF-23 | `crossing-comment-ranges/` | comments a range | comments a partially overlapping range | no crossing PIs may be emitted |
-| CF-24 | `comment-id-collision/` | generates `cmt-1`, `cmt-2`, `cmt-3` | generates the same ids for other threads | ids renamed, replies stay on the right thread |
-| CF-25 | `tracked-vs-plain-edit/` | edits with track changes on | edits the same text with them off | surviving tracked changes must still reject to the **base** wording |
+| CF-24 | `comment-id-collision/` | generates `cmt-1` with a reply | generates the same id for another thread, with its own reply | id renamed, replies stay on the right thread |
+| CF-25 | `tracked-vs-plain-edit/` | edits with track changes on | edits the same text with them off | a surviving tracked change must still reject to the **base** wording |
 
 ## What these add over the master set
 
@@ -64,9 +70,8 @@ Each README ends with a pointer to the Web Author URL pattern. For a quick check
 anything:
 
 ```
-xmllint --noout --nonet 3way/cases/*/*.dita
+xmllint --noout --nonet normal_cases/3way/cases/*/*.dita
 ```
 
 A cheap regression check for every case: resolve all conflicts in favour of A and diff the result
-against `<case>-user-a.dita`, then do the same for B. Both READMEs that rely on this say so
-explicitly.
+against `<case>-user-a.dita`, then do the same for B.

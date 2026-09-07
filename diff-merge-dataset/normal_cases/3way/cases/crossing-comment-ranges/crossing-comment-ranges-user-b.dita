@@ -9,13 +9,13 @@
       <title id="title-overview">Overview</title>
       <p id="p-cross">Tokens are signed with <?oxy_comment_start author="Dan Ionescu" timestamp="20260903T141000+0300" comment="Name the property here instead of saying the properties file." id="cmt-b-cross"?>the key configured in the properties file<?oxy_comment_end?> before the
         service starts.</p>
-      <p id="p-boundary">Set the property <codeph id="cp-key">auth.<?oxy_comment_start author="Dan Ionescu" timestamp="20260903T141100+0300" comment="This property was renamed in 4.2, check the release notes." id="cmt-b-boundary"?>signing.key</codeph> in the<?oxy_comment_end?>
+      <p id="p-boundary">Set the property <codeph id="cp-key">auth.signing.key</codeph> in the
         configuration file.</p>
       <ol id="ol-steps">
-        <li id="li-step-1">Stop the running service instance <?oxy_comment_start author="Dan Ionescu" timestamp="20260903T141200+0300" comment="These two steps should be one step, they are always done together." id="cmt-b-step"?>and drain the connections.</li>
-        <li id="li-step-2">Edit the properties file<?oxy_comment_end?> and set the signing key.</li>
+        <li id="li-step-1">Stop the running service instance and drain the connections.</li>
+        <li id="li-step-2">Edit the properties file and set the signing key.</li>
       </ol>
-      <p id="p-nested">The service writes an audit record for <?oxy_comment_start author="Dan Ionescu" timestamp="20260903T141300+0300" comment="Only failed attempts, or all of them?" id="cmt-b-nested"?>every login attempt<?oxy_comment_end?> that it
+      <p id="p-nested">The service writes an audit record for every login attempt that it
         rejects.</p>
     </section>
   </body>

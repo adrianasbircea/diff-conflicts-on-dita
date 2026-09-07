@@ -7,13 +7,12 @@
   <body>
     <section id="sec-overview">
       <title id="title-overview">Overview</title>
-      <p id="p-far">The Authentication Service checks the user credentials and issues signed access
-        tokens for every request.</p>
-      <p id="p-next">Stop and restart the service after every configuration change.</p>
-      <p id="p-same">Tokens expire after 7200 seconds.</p>
-      <p id="p-inline">Always set <codeph>auth.signing.key</codeph> to the path of the PEM
-        file.</p>
-      <p id="p-ends">The service is stateless. Any instance can serve any request.</p>
+      <p id="p-far">The Authentication Service checks the user credentials and issues signed
+        access tokens for every request.</p>
+      <p id="p-next">Restart the service after every configuration change.</p>
+      <p id="p-same">Tokens expire after 3600 seconds.</p>
+      <p id="p-inline">Set <codeph>auth.signing.key</codeph> to the path of the PEM file.</p>
+      <p id="p-ends">The service is stateless.</p>
     </section>
   </body>
 </topic>

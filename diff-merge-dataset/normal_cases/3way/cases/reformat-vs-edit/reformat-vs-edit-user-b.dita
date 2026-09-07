@@ -13,8 +13,6 @@
       <p id="p-arch" outputclass="architecture">Tokens are signed with the key configured in
         <codeph>auth.signing.key</codeph>. The service keeps no session data on the local disk, so
         any instance can serve any request.</p>
-      <p id="p-arch-note">The signing key is loaded once, at startup, and cached for the whole life
-        of the process.</p>
     </section>
     <section id="sec-config">
       <title id="title-config">Configuring the service</title>
@@ -22,7 +20,7 @@
         after every change.</p>
       <ul id="ul-prereq">
         <li id="li-prereq-1">A JDK 21 runtime is installed on the host.</li>
-        <li id="li-prereq-2">The database schema is migrated to revision 47.</li>
+        <li id="li-prereq-2">The database schema is migrated to revision 42.</li>
         <li id="li-prereq-3">Port 8443 is open for inbound TLS traffic.</li>
       </ul>
     </section>

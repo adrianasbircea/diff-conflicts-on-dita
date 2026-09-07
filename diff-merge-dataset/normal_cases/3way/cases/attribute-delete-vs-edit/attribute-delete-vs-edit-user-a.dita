@@ -9,14 +9,15 @@
       <title id="title-overview">Overview</title>
       <p id="p-arch">Tokens are signed with the key configured in
         <codeph>auth.signing.key</codeph>.</p>
-      <p id="p-legacy" rev="2.0">The legacy <apiname>SessionManager</apiname> component is still
+      <p id="p-legacy" rev="1.0">The legacy <apiname>SessionManager</apiname> component is still
         shipped.</p>
-      <note id="note-warn">Never commit the signing key to the repository.</note>
-      <xref id="x-limits" href="#cf-17-attr-delete-vs-modify/sec-limits" format="dita">Limits</xref>
+      <note id="note-warn" type="warning">Never commit the signing key to the repository.</note>
+      <xref id="x-limits" href="#cf-17-attr-delete-vs-modify/sec-limits" format="dita"
+        scope="local">Limits</xref>
     </section>
     <section id="sec-limits">
       <title id="title-limits">Limits</title>
-      <table id="table-limits" frame="topbot" colsep="0">
+      <table id="table-limits" frame="all" colsep="0">
         <title id="title-table-limits">Limits</title>
         <tgroup cols="2">
           <colspec colname="l1" colnum="1" colwidth="2*"/>
@@ -30,7 +31,7 @@
           <tbody>
             <row id="row-lim-ttl">
               <entry colname="l1" id="e-lim-ttl-name">Token TTL</entry>
-              <entry colname="l2" id="e-lim-ttl-def">3600</entry>
+              <entry colname="l2" id="e-lim-ttl-def" align="left">3600</entry>
             </row>
           </tbody>
         </tgroup>

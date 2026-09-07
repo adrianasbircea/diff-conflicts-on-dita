@@ -2,19 +2,19 @@
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="id-05-same-attr-value" xml:lang="en-us">
   <title id="topic-title">Same Attribute Value in Both</title>
-  <shortdesc id="shortdesc" outputclass="lead">Both users make the same attribute change. This must
-    merge cleanly, not conflict.</shortdesc>
+  <shortdesc id="shortdesc">Both users make the same attribute change. This must merge cleanly, not
+    conflict.</shortdesc>
   <body>
     <section id="sec-overview">
       <title id="title-overview">Overview</title>
       <p id="p-intro">The Authentication Service validates user credentials and issues signed access
         tokens.</p>
-      <p id="p-legacy">The legacy <apiname>SessionManager</apiname> component is still
+      <p id="p-legacy" rev="1.0">The legacy <apiname>SessionManager</apiname> component is still
         shipped.</p>
-      <note id="note-warn" type="danger">Never commit the signing key to the repository.</note>
+      <note id="note-warn" type="warning">Never commit the signing key to the repository.</note>
       <ul id="ul-prereq">
         <li id="li-prereq-1">A JDK 21 runtime is installed on the host.</li>
-        <li id="li-prereq-2">The database schema is migrated to revision 47.</li>
+        <li id="li-prereq-2">The database schema is migrated to revision 42.</li>
       </ul>
       <table id="table-features" frame="topbot">
         <title id="title-features">Features</title>
@@ -28,9 +28,9 @@
             </row>
           </thead>
           <tbody>
-            <row id="row-sec" rowsep="0">
+            <row id="row-sec">
               <entry colname="c1" id="e-sec-name">Transport security</entry>
-              <entry colname="c2" id="e-sec-status" align="center">Active</entry>
+              <entry colname="c2" id="e-sec-status">Active</entry>
             </row>
           </tbody>
         </tgroup>

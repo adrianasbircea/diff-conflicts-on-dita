@@ -10,15 +10,13 @@
       <?oxy_comment_start author="Ana Popescu" timestamp="20260903T130000+0300" comment="Add a cross reference to the rolling restart procedure." id="cmt-a-config"?><p
         id="p-config-lead">The configuration file is read once, at startup. Restart the service
         after every change.</p><?oxy_comment_end?>
-      <p id="p-startup">The signing key is loaded at <?oxy_comment_start author="Ana Popescu" timestamp="20260903T130100+0300" comment="Is this still true when the key is rotated at runtime?" id="cmt-a-frag"?>startup<?oxy_comment_end?> and cached for the whole life of the
+      <p id="p-startup">The signing key is loaded at startup and cached for the whole life of the
         process.</p>
-      <note id="note-warn" type="warning"><?oxy_comment_start author="Ana Popescu" timestamp="20260903T130200+0300" comment="Mention the secret store as the recommended alternative." id="cmt-a-warn"?>Never
-        commit the signing key to the repository.<?oxy_comment_end?></note>
+      <note id="note-warn" type="warning">Never commit the signing key to the repository.</note>
       <ol id="ol-steps">
         <li id="li-step-1">Stop the running service instance.</li>
-        <?oxy_comment_start author="Ana Popescu" timestamp="20260903T130300+0300" comment="Add the full path of the file for Windows installations." id="cmt-a-step"?><li
-          id="li-step-2">Edit <filepath>conf/auth-service.properties</filepath> and set the
-          signing key.</li><?oxy_comment_end?>
+        <li id="li-step-2">Edit <filepath>conf/auth-service.properties</filepath> and set the
+          signing key.</li>
       </ol>
       <table id="table-features" frame="all">
         <title id="title-features">Features</title>
@@ -28,8 +26,7 @@
           <tbody>
             <row id="row-sec">
               <entry colname="c1" id="e-sec-name">Transport security</entry>
-              <?oxy_comment_start author="Ana Popescu" timestamp="20260903T130400+0300" comment="Is this module really fully active in 4.2?" id="cmt-a-cell"?><entry
-                colname="c2" id="e-sec-status">Active</entry><?oxy_comment_end?>
+              <entry colname="c2" id="e-sec-status">Active</entry>
             </row>
           </tbody>
         </tgroup>

@@ -8,14 +8,14 @@
     <section id="sec-overview">
       <title id="title-overview">Overview</title>
       <!-- Keep this paragraph in sync with the product datasheet. -->
-      <!-- Added: the wording below was approved by Legal on 2026-09-01. -->
       <p id="p-intro">The Authentication Service validates user credentials and issues signed access
         tokens.</p>
-      <p id="p-arch">Tokens are signed with the key configured in
-        <codeph>auth.signing.key</codeph>. Any instance can serve any<!-- was: every --> request.</p>
+      <p id="p-arch">Tokens are signed with the key configured in <!-- property renamed in 4.0 -->
+        <codeph>auth.signing.key</codeph>. Any instance can serve any request.</p>
       <p id="p-moved-comment">The service exposes a health endpoint on the same port.</p>
-      <p id="p-deleted-comment">Metrics are exposed in Prometheus format.</p>
       <!-- TODO: document the readiness endpoint as well. -->
+      <p id="p-deleted-comment">Metrics are exposed in Prometheus format.</p>
+      <!-- This comment is deleted in the modified file. -->
     </section>
     <section id="sec-config">
       <title id="title-config">Configuring the service</title>

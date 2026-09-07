@@ -4,40 +4,33 @@
 
 A and B are derived directly and independently from the base. Neither file has review markup.
 
-Both users removed exactly the same five things. A convergent deletion is **not** a conflict: the
+Both users removed exactly the same list item. A convergent deletion is **not** a conflict: the
 content is gone in both branches, so the merge has nothing to choose between. A tool that reports
 delete/delete as a conflict makes every real cleanup commit unmergeable.
 
-Each user also has one small edit of their own, so the two files are not identical and the merge is
-a real merge rather than a no-op.
+## The change
 
-## Deleted in A and in B, identically - must merge with no conflict
-
-| ID | Location | Deletion |
+| Location | User A | User B |
 | --- | --- | --- |
-| ID-04a | `note-config` | the whole `<note>` element |
-| ID-04b | `li-prereq-3` | one list item, from the middle of `ul-prereq` |
-| ID-04c | `p-arch` | the `@outputclass="architecture"` attribute |
-| ID-04d | `row-lim-burst` | one table row, from the middle of the `tbody` |
-| ID-04e | `sec-legacy` | a whole `<section>` subtree, including `p-legacy`, its `@rev`, its `<apiname>` child and `p-legacy-2` |
+| `li-prereq-3` | deletes the item | deletes the same item |
+| `p-intro` | *validates* -> *checks* | untouched |
 
-## Independent edits - must both survive
+The edit to `p-intro` is scaffolding, not part of the case: without it the two files would be
+identical and the merge would be a no-op instead of a real merge.
 
-| ID | Location | Change |
-| --- | --- | --- |
-| A-D01 | `p-intro` | *validates* -> *checks* (A only) |
-| B-D01 | `li-prereq-1` | *A JDK 21 runtime* -> *A JDK 21 runtime, or later* (B only) |
+## Expected
 
-## Expected result
-
-* Zero conflicts.
-* `note-config`, `li-prereq-3`, `row-lim-burst` and `sec-legacy` are absent, each removed once.
-* `p-arch` has no `@outputclass`, and is not otherwise reported as changed.
-* `p-intro` reads *checks*; `li-prereq-1` reads *or later*.
-* `ul-prereq` has 3 items, in the order 1, 2, 4. `table-limits` has 2 body rows, TTL then rate.
+* **Zero conflicts.** `li-prereq-3` is absent, removed once, and `ul-prereq` has 3 items in the
+  order 1, 2, 4.
+* `p-intro` reads *checks*.
+* Everything else - the note, the tables, the other sections - is identical in all three versions
+  and must be reported nowhere.
 
 ## Trap to watch for
 
 A tool that matches nodes by position rather than by identity will pair A's `li-prereq-4` with B's
-`li-prereq-3` slot and report a spurious modification. Same for `row-lim-rate`, which moves up one
-position in both files for the same reason.
+`li-prereq-3` slot and report a spurious modification.
+
+## Opening in Web Author
+
+See the end of `../../../../base/2way/README-2way.md`.

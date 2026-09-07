@@ -9,32 +9,28 @@ elements between two trees. When both sides change it to different values, the k
 branches and a naive matcher reports the whole subtree as deleted on one side and inserted on the
 other - losing every edit inside it.
 
-Two of the renamed ids are also link targets, so this case doubles as a referential integrity test.
+Each user also repointed the `<xref>` that targets the section, because a rename that leaves the
+reference behind is a different case (CF-19).
 
-## Conflicts
+## The change
 
-| ID | Location | Base `@id` | User A | User B | Expected |
-| --- | --- | --- | --- | --- | --- |
-| CF-18a | the second `<section>` | `sec-limits` | `sec-rate-limits` | `sec-service-limits` | conflict on `@id` only. The section must still be matched as **one** section in all three trees: its title, `p-limits` and `p-limits-2` must be diffed normally, not reported as a deleted plus an inserted subtree |
-| CF-18b | `p-limits` (inside that section) | - | unchanged | text extended (*and per tenant*) | **must merge cleanly**, despite CF-18a on the parent. This is the payload of the case: if B's edit is lost, the rename broke subtree matching |
-| CF-18c | second item of `ul-prereq` | `li-prereq-2` | `li-schema` | `li-db-schema` | conflict on `@id`; B's text change *revision 42* -> *47* must survive |
-| CF-18d | `p-see` | - | `@href` -> `#.../sec-rate-limits` | `@href` -> `#.../sec-service-limits` | conflict on `@href`. Whichever `@id` wins CF-18a, the resolved `@href` must point at it - a merge that picks A's id and B's href produces a broken link |
+| Location | Base | User A | User B |
+| --- | --- | --- | --- |
+| the second `<section>` | `id="sec-limits"` | `id="sec-rate-limits"` | `id="sec-service-limits"` |
+| `p-see` | `@href` ends in `/sec-limits` | repointed at `sec-rate-limits` | repointed at `sec-service-limits` |
+| `p-limits`, inside that section | *applied per client identifier* | untouched | *... and per tenant* |
 
-## Must not produce a conflict
+## Expected
 
-| ID | Location | User A | User B | Expected |
-| --- | --- | --- | --- | --- |
-| CF-18e | `p-arch` | `@id` renamed to `p-architecture` | text extended (*before they are returned*) | clean merge: id `p-architecture`, text with B's addition. Only one side touched each |
-
-## Global expectations
-
-* Four conflicts (CF-18a, c, d) plus their linkage, and exactly one clean merge (CF-18e).
-* `p-limits-2`, `li-prereq-1`, `title-limits` and `title-overview` are identical everywhere and must
-  not be reported.
-* After every conflict is resolved, run a validation and a link check: no duplicate `@id`, and every
+* **One conflict**, on the `@id` - and with it the `@href`, which must resolve to whichever id wins.
+  A per-attribute resolution that treats them independently will happily produce an unresolvable
+  link; the tool should either keep them consistent or warn.
+* **B's edit to `p-limits` must merge cleanly.** This is the payload of the case: if it is lost, the
+  rename broke subtree matching and the section was diffed as a delete plus an insert.
+* `title-limits`, `p-limits-2`, `p-arch` and the list are identical everywhere and must not be
+  reported.
+* After the conflict is resolved, run a validation and a link check: no duplicate `@id`, and every
   `@href` resolves to an element that exists in the merged file.
-* CF-18d is the trap: a per-attribute resolution that treats `@id` and `@href` independently will
-  happily produce an unresolvable link. The tool should either keep them consistent or warn.
 
 ## Opening in Web Author
 

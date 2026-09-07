@@ -8,39 +8,18 @@
     <section id="sec-overview">
       <title id="title-overview">Overview</title>
       <p id="p-intro">The Authentication Service validates user credentials and issues signed access
-        tokens. It runs as a stateless component and can be scaled horizontally.</p>
-      <note id="note-warn" type="warning"><?oxy_comment_start author="Ana Popescu" timestamp="20260901T090100+0300" comment="Also mention the secret store here." id="cmt-base-warn" flag="done"?>Never
-        commit the signing key to the repository.<?oxy_comment_end?></note>
+        tokens. It runs as a stateless component and can be scaled
+        horizontally.</p>
+      <note id="note-warn" type="warning">Never commit the signing key to the repository.</note>
     </section>
     <section id="sec-config">
       <title id="title-config">Configuring the service</title>
-      <?oxy_comment_start author="Dan Ionescu" timestamp="20260901T090200+0300" comment="Describe the rolling restart procedure here." id="cmt-base-config"?><?oxy_comment_start author="Ana Popescu" timestamp="20260901T090300+0300" comment="Agreed, I will add it once the procedure is approved." parentID="cmt-base-config" mid="1"?><?oxy_comment_start author="Ana Popescu" timestamp="20260903T120000+0300" comment="The procedure was approved on 2026-09-02, I will write it this week." parentID="cmt-base-config" mid="2"?><p
-        id="p-config-lead">The configuration file is read once, at startup. Restart the service
-        after every change.</p><?oxy_comment_end mid="2"?><?oxy_comment_end mid="1"?><?oxy_comment_end?>
+      <p id="p-config-lead">The configuration file is read once, at startup. Restart the service
+        after every change.</p>
       <ol id="ol-steps">
-        <li id="li-step-1">Stop the running service instance and wait for the open connections to
-          drain.</li>
+        <li id="li-step-1">Stop the running service instance.</li>
         <li id="li-step-2">Start the service and check the health endpoint.</li>
       </ol>
-      <table id="table-limits" frame="all" colsep="1">
-        <title id="title-table-limits">Limits</title>
-        <tgroup cols="2">
-          <colspec colname="l1" colnum="1" colwidth="2*"/>
-          <colspec colname="l2" colnum="2" colwidth="1*"/>
-          <tbody>
-            <row id="row-lim-ttl">
-              <entry colname="l1" id="e-lim-ttl-name">Token TTL</entry>
-              <entry colname="l2" id="e-lim-ttl-def">3600</entry>
-            </row>
-          </tbody>
-        </tgroup>
-      </table>
-    </section>
-    <section id="sec-trouble">
-      <title id="title-trouble">Troubleshooting</title>
-      <p id="p-trouble-lead">Check the service log first.</p>
-      <p id="p-trouble-metrics">The metrics endpoint reports the number of rejected
-        credentials.</p>
     </section>
   </body>
 </topic>

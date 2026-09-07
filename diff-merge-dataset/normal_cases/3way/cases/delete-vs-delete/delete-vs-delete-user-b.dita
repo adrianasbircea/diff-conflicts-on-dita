@@ -9,14 +9,15 @@
       <title id="title-overview">Overview</title>
       <p id="p-intro">The Authentication Service validates user credentials and issues signed access
         tokens.</p>
-      <p id="p-arch">Tokens are signed with the key configured in
+      <p id="p-arch" outputclass="architecture">Tokens are signed with the key configured in
         <codeph>auth.signing.key</codeph>.</p>
+      <note id="note-config" type="note">The configuration file is not reloaded automatically.</note>
     </section>
     <section id="sec-config">
       <title id="title-config">Configuring the service</title>
       <p id="p-config-lead">The configuration file is read once, at startup.</p>
       <ul id="ul-prereq">
-        <li id="li-prereq-1">A JDK 21 runtime, or later, is installed on the host.</li>
+        <li id="li-prereq-1">A JDK 21 runtime is installed on the host.</li>
         <li id="li-prereq-2">The database schema is migrated to revision 42.</li>
         <li id="li-prereq-4">A signing key of at least 256 bits is available.</li>
       </ul>
@@ -36,6 +37,10 @@
               <entry colname="l1" id="e-lim-ttl-name">Token TTL</entry>
               <entry colname="l2" id="e-lim-ttl-def">3600</entry>
             </row>
+            <row id="row-lim-burst">
+              <entry colname="l1" id="e-lim-burst-name">Burst size</entry>
+              <entry colname="l2" id="e-lim-burst-def">50</entry>
+            </row>
             <row id="row-lim-rate">
               <entry colname="l1" id="e-lim-rate-name">Requests per minute</entry>
               <entry colname="l2" id="e-lim-rate-def">600</entry>
@@ -43,6 +48,12 @@
           </tbody>
         </tgroup>
       </table>
+    </section>
+    <section id="sec-legacy">
+      <title id="title-legacy">Legacy session manager</title>
+      <p id="p-legacy" rev="1.0">The legacy <apiname>SessionManager</apiname> component is still
+        shipped for backward compatibility.</p>
+      <p id="p-legacy-2">It will be removed in the next major release.</p>
     </section>
   </body>
 </topic>

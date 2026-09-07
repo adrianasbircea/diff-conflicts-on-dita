@@ -2,46 +2,35 @@
 
 **Base:** `formatting-noise-base.dita` -> **Modified:** `formatting-noise-modified.dita`
 
-The modified file is the same document re-indented and re-wrapped by a different editor profile.
-Nothing in the content changed, except the one case explicitly marked *real change* below. This is
-the most frequent real-world diff: one author saves with another pretty-printer and the whole file
-looks modified.
+The modified file is the same document saved by a different editor profile. **No content changed at
+all** - every difference below is serialisation. This is the most frequent real-world diff: one
+author saves with another pretty-printer and the whole file looks modified.
 
 No review markup in either file.
 
-## Noise - must NOT be reported as a change
+## The change
 
-| ID | Location | Difference | Expected |
-| --- | --- | --- | --- |
-| N-01a | whole file | indentation 2 -> 4 spaces, every level | no change |
-| N-01b | `shortdesc`, `p-intro`, `p-config-lead` | text re-wrapped at a different column | no change |
-| N-01c | `p-arch`, `p-link` | element serialised on a single long line | no change |
-| N-01d | `p-intro` | attribute order `id, outputclass` -> `outputclass, id` | no change |
-| N-01e | `p-intro` | `outputclass` quoted with `'` instead of `"` | no change |
-| N-01f | `p-nbsp` | `&#160;` -> `&#xA0;` (decimal vs hex, same character) | no change |
-| N-01g | `p-link` | `&amp;` -> `&#38;` inside `@href` | no change |
-| N-01h | `img-topology` | `<image ...></image>` -> `<image .../>` | no change |
-| N-01i | `img-topology` | attribute order changed on the same element | no change |
-| N-01j | `cb-untouched` | reformatting must not touch a `xml:space="preserve"` block | no change |
+| Location | Difference |
+| --- | --- |
+| whole file | indentation 2 -> 4 spaces, text re-wrapped at a different column, some elements on one long line |
+| `p-intro` | attribute order `id, outputclass` -> `outputclass, id`, and `outputclass` quoted with `'` instead of `"` |
+| `p-nbsp` | `&#160;` -> `&#xA0;` - decimal versus hex, the same character |
+| `p-link` | `&amp;` -> `&#38;` inside `@href` |
+| `img-topology` | `<image ...></image>` -> `<image .../>`, attribute order changed |
+| `cb-untouched` | left alone: reformatting must not reach inside `xml:space="preserve"` |
 
-## Real change - must be reported
+## Expected
 
-| ID | Location | Difference | Expected |
-| --- | --- | --- | --- |
-| N-01k | `p-arch` | double space after *local disk.* -> single | reported only when whitespace is not normalised; must never be the only reason the paragraph is flagged as rewritten |
-
-## Global expectations
-
-* With whitespace normalisation on: no change at all.
-* With whitespace normalisation off: N-01k only; N-01a..N-01j still produce nothing.
-* No case may collapse into "whole document changed".
+* **Zero differences reported.** Not one entry, not a "changed attributes" marker, and never
+  "whole document changed".
+* The two files are character-identical once parsed: same elements, same attribute values, same
+  text. A differ that reports anything here is comparing serialisation, not the document.
 
 Significant whitespace inside `xml:space="preserve"` is deliberately **not** tested here: it is
 covered by `../../../../edge_cases/D3-codeblock-whitespace`, which pairs with
-`../../../../context/C10-global-reformat` on exactly that discrimination. N-01j only checks that the
-reformat leaves a preserve block alone.
+`../../../../context/C10-global-reformat` on exactly that discrimination.
 
 ## Opening in Web Author
 
 See the end of `../../../../base/2way/README-2way.md`, replacing the last path segment with
-`2way%2Fcases%2Fformatting-noise%2Fformatting-noise-modified.dita`.
+`normal_cases%2F2way%2Fcases%2Fformatting-noise%2Fformatting-noise-modified.dita`.

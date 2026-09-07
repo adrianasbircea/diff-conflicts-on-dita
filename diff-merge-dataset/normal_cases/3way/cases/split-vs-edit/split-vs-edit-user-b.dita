@@ -10,13 +10,13 @@
       <p id="p-split">The Authentication Service checks user credentials. It issues signed access
         tokens that expire after two hours. Clients must refresh the token before it expires.</p>
       <p id="p-join-1">The service is stateless.</p>
-      <p id="p-join-2">Every instance can serve any request.</p>
+      <p id="p-join-2">Any instance can serve any request.</p>
     </section>
     <section id="sec-config">
       <title id="title-config">Configuring the service</title>
       <ul id="ul-prereq">
-        <li id="li-split">The database schema is migrated to revision 47. The migration tool is
-          shipped with the service and with the installer.</li>
+        <li id="li-split">The database schema is migrated to revision 42. The migration tool is
+          shipped with the service.</li>
         <li id="li-keep">Port 8443 is open for inbound TLS traffic.</li>
       </ul>
     </section>
