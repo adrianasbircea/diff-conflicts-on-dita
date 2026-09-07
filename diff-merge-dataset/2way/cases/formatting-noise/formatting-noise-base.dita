@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="n-01-reformat" xml:lang="en-us">
+  <title id="topic-title">Formatting Noise</title>
+  <shortdesc id="shortdesc">The modified file is a reformatted copy of this one. Apart from the two
+    cases marked as real changes, no content differs.</shortdesc>
+  <body>
+    <section id="sec-overview">
+      <title id="title-overview">Overview</title>
+      <p id="p-intro" outputclass="lead">The Authentication Service validates user credentials and issues signed access tokens. It runs as a stateless component and can be scaled horizontally behind a load balancer.</p>
+      <p id="p-arch" outputclass="architecture">Tokens are signed with the key configured in
+        <codeph>auth.signing.key</codeph>. The service keeps no session data on the local disk, so
+        any instance can serve any request.</p>
+      <p id="p-nbsp">The default handshake timeout is <codeph>30&#160;s</codeph> and cannot be set to
+        zero.</p>
+      <p id="p-link">The full parameter list is documented in the <xref
+          href="https://example.com/docs?product=auth&amp;view=reference" format="html"
+          scope="external">reference guide</xref>.</p>
+      <p id="p-image">The deployment topology is shown below. <image href="figs/topology.png"
+          placement="break" id="img-topology"></image></p>
+    </section>
+    <section id="sec-config">
+      <title id="title-config">Configuring the service</title>
+      <p id="p-config-lead">The configuration file is read once, at startup. Restart the service
+        after every change.</p>
+      <codeblock id="cb-untouched" xml:space="preserve">auth.token.ttl=3600
+auth.signing.key=/etc/auth/signing.pem
+auth.audit.enabled=true</codeblock>
+      <codeblock id="cb-reindented" xml:space="preserve">server:
+    port: 8443
+    tls: required</codeblock>
+    </section>
+  </body>
+</topic>

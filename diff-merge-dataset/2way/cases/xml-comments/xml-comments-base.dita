@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="x-01-xml-comments" xml:lang="en-us">
+  <title id="topic-title">XML Comments</title>
+  <shortdesc id="shortdesc">This topic carries plain XML comments, not Oxygen review comments, in
+    every position where a comment is allowed.</shortdesc>
+  <body>
+    <!-- Overview section: reviewed by the Identity team in release 4.1. -->
+    <section id="sec-overview">
+      <title id="title-overview">Overview</title>
+      <!-- Keep this paragraph in sync with the product datasheet. -->
+      <p id="p-intro">The Authentication Service validates user credentials and issues signed access
+        tokens.</p>
+      <p id="p-arch">Tokens are signed with the key configured in <!-- property renamed in 4.0 -->
+        <codeph>auth.signing.key</codeph>. Any instance can serve any request.</p>
+      <p id="p-moved-comment">The service exposes a health endpoint on the same port.</p>
+      <!-- TODO: document the readiness endpoint as well. -->
+      <p id="p-deleted-comment">Metrics are exposed in Prometheus format.</p>
+      <!-- This comment is deleted in the modified file. -->
+    </section>
+    <section id="sec-config">
+      <title id="title-config">Configuring the service</title>
+      <p id="p-config-lead">The configuration file is read once, at startup.</p>
+      <p id="p-commented-out">The legacy <apiname>SessionManager</apiname> component is still
+        shipped for backward compatibility.</p>
+      <!-- Reviewed: 2026-08-14. -->
+      <ul id="ul-prereq">
+        <li id="li-prereq-1">A JDK 21 runtime is installed on the host.</li>
+        <!-- The schema revision changes with every release. -->
+        <li id="li-prereq-2">The database schema is migrated to revision 42.</li>
+      </ul>
+    </section>
+  </body>
+</topic>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="cf-15-adjacent-word-edits" xml:lang="en-us">
+  <title id="topic-title">Adjacent Word Edits</title>
+  <shortdesc id="shortdesc">A and B edit different words of the same sentence. Only the case where
+    they edit the same word is a real conflict.</shortdesc>
+  <body>
+    <section id="sec-overview">
+      <title id="title-overview">Overview</title>
+      <p id="p-far">The Authentication Service validates the user credentials and issues
+        short-lived access tokens for every request.</p>
+      <p id="p-next">Restart each service instance after every configuration change.</p>
+      <p id="p-same">Tokens expire after 1800 seconds.</p>
+      <p id="p-inline">Set <codeph>auth.signing.key</codeph> to the path of the PEM key file.</p>
+      <p id="p-ends">Requests are never pinned to an instance. The service is stateless.</p>
+    </section>
+  </body>
+</topic>

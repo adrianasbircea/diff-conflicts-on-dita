@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="cf-12-insert-vs-insert" xml:lang="en-us">
+  <title id="topic-title">Insert Against Insert</title>
+  <shortdesc id="shortdesc">Both users add new content at exactly the same anchor.</shortdesc>
+  <body>
+    <section id="sec-overview">
+      <title id="title-overview">Overview</title>
+      <p id="p-intro">The Authentication Service validates user credentials and issues signed access
+        tokens.</p>
+      <p id="p-b-security">All traffic to the service is rejected unless it arrives over TLS 1.3 or
+        later.</p>
+      <p id="p-arch">Tokens are signed with the key configured in
+        <codeph>auth.signing.key</codeph>.</p>
+    </section>
+    <section id="sec-config">
+      <title id="title-config">Configuring the service</title>
+      <p id="p-config-lead">The configuration file is read once, at startup.</p>
+      <note id="note-restart" type="important">The service must be restarted after every change to
+        the configuration file.</note>
+      <ul id="ul-prereq">
+        <li id="li-prereq-1">A JDK 21 runtime is installed on the host.</li>
+        <li id="li-prereq-2">The database schema is migrated to revision 42.</li>
+        <li id="li-prereq-3">Port 8443 is open for inbound TLS traffic.</li>
+        <li id="li-prereq-4">The audit collector is reachable on port 9443.</li>
+      </ul>
+      <table id="table-limits" frame="all">
+        <title id="title-limits">Limits</title>
+        <tgroup cols="2">
+          <colspec colname="l1" colnum="1" colwidth="2*"/>
+          <colspec colname="l2" colnum="2" colwidth="1*"/>
+          <thead>
+            <row id="row-lim-head">
+              <entry colname="l1" id="e-lim-head-1">Limit</entry>
+              <entry colname="l2" id="e-lim-head-2">Default</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row id="row-lim-ttl">
+              <entry colname="l1" id="e-lim-ttl-name">Token TTL</entry>
+              <entry colname="l2" id="e-lim-ttl-def">3600</entry>
+            </row>
+            <row id="row-lim-rate">
+              <entry colname="l1" id="e-lim-rate-name">Requests per minute</entry>
+              <entry colname="l2" id="e-lim-rate-def">600</entry>
+            </row>
+            <row id="row-lim-clock">
+              <entry colname="l1" id="e-lim-clock-name">Clock skew</entry>
+              <entry colname="l2" id="e-lim-clock-def">30</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+  </body>
+</topic>

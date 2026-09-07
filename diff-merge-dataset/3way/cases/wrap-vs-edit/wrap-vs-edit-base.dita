@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="cf-13-wrap-vs-edit" xml:lang="en-us">
+  <title id="topic-title">Wrap Against Edit</title>
+  <shortdesc id="shortdesc">User A only changes the nesting of existing content. User B only edits
+    the text inside it.</shortdesc>
+  <body>
+    <p id="p-inline-wrap">Set auth.signing.key in the properties file before the first
+      restart.</p>
+    <p id="p-inline-unwrap">Use the <b>authctl</b> tool to validate the configuration.</p>
+    <p id="p-inline-clash">The property auth.token.ttl controls how long an access token stays
+      valid.</p>
+    <p id="p-body-1">The Authentication Service validates user credentials and issues signed access
+      tokens.</p>
+    <p id="p-body-2">It runs as a stateless component and can be scaled horizontally behind a load
+      balancer.</p>
+    <section id="sec-config">
+      <title id="title-config">Configuring the service</title>
+      <p id="p-config-lead">The configuration file is read once, at startup.</p>
+      <note id="note-wrap" type="note">
+        <p id="p-in-note">A hot reload of the configuration file is not supported.</p>
+      </note>
+      <p id="p-config-tail">Restart the service after every change.</p>
+    </section>
+  </body>
+</topic>

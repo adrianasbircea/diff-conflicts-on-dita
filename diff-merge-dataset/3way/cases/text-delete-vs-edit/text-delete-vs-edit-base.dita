@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="cf-16-text-delete-vs-modify" xml:lang="en-us">
+  <title id="topic-title">Text Deleted Against Text Modified</title>
+  <shortdesc id="shortdesc">User A removes text that user B edits. The conflict must be reported at
+    the granularity of the removed fragment, not of the whole block.</shortdesc>
+  <body>
+    <section id="sec-trouble">
+      <title id="title-trouble">Troubleshooting</title>
+      <p id="p-del-sentence">The service writes an audit record for every login. The record
+        contains the client IP address. Records are rotated daily.</p>
+      <p id="p-del-overlap">Collect the audit log before opening a ticket.</p>
+      <p id="p-del-neighbour">Attach the metrics snapshot and the thread dump to the ticket.</p>
+      <ul id="ul-checks">
+        <li id="li-del">Check that the signing key is readable by the service user.</li>
+        <li id="li-keep">Check that port 8443 is reachable from the load balancer.</li>
+      </ul>
+      <table id="table-limits" frame="all">
+        <title id="title-limits">Limits</title>
+        <tgroup cols="2">
+          <colspec colname="l1" colnum="1" colwidth="2*"/>
+          <colspec colname="l2" colnum="2" colwidth="2*"/>
+          <thead>
+            <row id="row-lim-head">
+              <entry colname="l1" id="e-lim-head-1">Limit</entry>
+              <entry colname="l2" id="e-lim-head-2">Notes</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row id="row-lim-rate">
+              <entry colname="l1" id="e-lim-rate-name">Requests per minute</entry>
+              <entry colname="l2" id="e-lim-rate-notes">Counted per client identifier.</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+  </body>
+</topic>

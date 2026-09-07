@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="id-05-same-attr-value" xml:lang="en-us">
+  <title id="topic-title">Same Attribute Value in Both</title>
+  <shortdesc id="shortdesc" outputclass="lead">Both users make the same attribute change. This must
+    merge cleanly, not conflict.</shortdesc>
+  <body>
+    <section id="sec-overview">
+      <title id="title-overview">Overview</title>
+      <p id="p-intro">The Authentication Service validates user credentials and issues signed access
+        tokens.</p>
+      <p id="p-legacy">The legacy <apiname>SessionManager</apiname> component is still
+        shipped.</p>
+      <note id="note-warn" type="danger">Never commit the signing key to the repository.</note>
+      <ul id="ul-prereq">
+        <li id="li-prereq-1">A JDK 21 runtime is installed on the host.</li>
+        <li id="li-prereq-2">The database schema is migrated to revision 47.</li>
+      </ul>
+      <table id="table-features" frame="topbot">
+        <title id="title-features">Features</title>
+        <tgroup cols="2">
+          <colspec colname="c1" colnum="1" colwidth="2*"/>
+          <colspec colname="c2" colnum="2" colwidth="1*"/>
+          <thead>
+            <row id="row-head">
+              <entry colname="c1" id="e-head-1">Feature</entry>
+              <entry colname="c2" id="e-head-2">Status</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row id="row-sec" rowsep="0">
+              <entry colname="c1" id="e-sec-name">Transport security</entry>
+              <entry colname="c2" id="e-sec-status" align="center">Active</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+  </body>
+</topic>

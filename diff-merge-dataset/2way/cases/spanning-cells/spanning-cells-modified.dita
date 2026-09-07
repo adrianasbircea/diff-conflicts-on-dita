@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="tb-07-span-cells" xml:lang="en-us">
+  <title id="topic-title">Tables with Spanning Cells</title>
+  <shortdesc id="shortdesc">Two CALS tables that use horizontal spans (<codeph>namest</codeph> /
+    <codeph>nameend</codeph>) and vertical spans (<codeph>morerows</codeph>).</shortdesc>
+  <body>
+    <section id="sec-features">
+      <title id="title-features">Feature matrix</title>
+      <table id="table-span-h" frame="all">
+        <title id="title-table-span-h">Features</title>
+        <tgroup cols="3">
+          <colspec colname="c1" colnum="1" colwidth="1.2*"/>
+          <colspec colname="c2" colnum="2" colwidth="3*"/>
+          <colspec colname="c3" colnum="3" colwidth="1*"/>
+          <thead>
+            <row id="row-h-head">
+              <entry colname="c1" id="e-h-head-1">Feature</entry>
+              <entry colname="c2" id="e-h-head-2">Description</entry>
+              <entry colname="c3" id="e-h-head-3">Status</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row id="row-merge">
+              <entry namest="c1" nameend="c2" id="e-merge-name">Login - interactive login
+                flow.</entry>
+              <entry colname="c3" id="e-merge-status">Active</entry>
+            </row>
+            <row id="row-widen">
+              <entry namest="c1" nameend="c3" id="e-widen-span">Token issuance and renewal</entry>
+            </row>
+            <row id="row-keep">
+              <entry namest="c1" nameend="c2" id="e-keep-span">Audit log shipping to the
+                collector</entry>
+              <entry colname="c3" id="e-keep-status">Planned</entry>
+            </row>
+            <row id="row-split-h">
+              <entry colname="c1" id="e-split-name">Rate limiting</entry>
+              <entry colname="c2" id="e-split-desc">Quotas per client.</entry>
+              <entry colname="c3" id="e-split-status">Beta</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section id="sec-endpoints">
+      <title id="title-endpoints">Endpoints</title>
+      <table id="table-span-v" frame="all">
+        <title id="title-table-span-v">REST endpoints</title>
+        <tgroup cols="3">
+          <colspec colname="m1" colnum="1" colwidth="1*"/>
+          <colspec colname="m2" colnum="2" colwidth="1*"/>
+          <colspec colname="m3" colnum="3" colwidth="2.5*"/>
+          <thead>
+            <row id="row-v-head">
+              <entry colname="m1" id="e-v-head-1">Group</entry>
+              <entry colname="m2" id="e-v-head-2">Method</entry>
+              <entry colname="m3" id="e-v-head-3">Notes</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row id="row-v1">
+              <entry colname="m1" id="e-v-session">Session APIs</entry>
+              <entry colname="m2" id="e-v1-method">POST</entry>
+              <entry colname="m3" id="e-v1-notes">Creates a session.</entry>
+            </row>
+            <row id="row-v2">
+              <entry colname="m1" id="e-v2-group">Session APIs</entry>
+              <entry colname="m2" id="e-v2-method">DELETE</entry>
+              <entry colname="m3" id="e-v2-notes">Ends a session.</entry>
+            </row>
+            <row id="row-v3">
+              <entry colname="m1" morerows="1" id="e-v3-group">Token APIs</entry>
+              <entry colname="m2" id="e-v3-method">POST</entry>
+              <entry colname="m3" id="e-v3-notes">Issues a token.</entry>
+            </row>
+            <row id="row-v4">
+              <entry colname="m2" id="e-v4-method">GET</entry>
+              <entry colname="m3" id="e-v4-notes">Introspects a token.</entry>
+            </row>
+            <row id="row-v5">
+              <entry colname="m1" morerows="2" id="e-v-admin">Admin APIs</entry>
+              <entry colname="m2" id="e-v5-method">POST</entry>
+              <entry colname="m3" id="e-v5-notes">Rotates the signing key.</entry>
+            </row>
+            <row id="row-v6">
+              <entry colname="m2" id="e-v6-method">GET</entry>
+              <entry colname="m3" id="e-v6-notes">Reads the current key id.</entry>
+            </row>
+            <row id="row-v7">
+              <entry colname="m2" id="e-v7-method">DELETE</entry>
+              <entry colname="m3" id="e-v7-notes">Revokes a key.</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+  </body>
+</topic>

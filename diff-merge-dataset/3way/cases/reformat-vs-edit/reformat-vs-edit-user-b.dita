@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="cf-11-reformat-vs-edit" xml:lang="en-us">
+  <title id="topic-title">Reformat Against Edit</title>
+  <shortdesc id="shortdesc">User A only reformats the file. User B only edits the content. The merge
+    must keep B's edits and must not report the whole file as conflicting.</shortdesc>
+  <body>
+    <section id="sec-overview">
+      <title id="title-overview">Overview</title>
+      <p id="p-intro" outputclass="lead">The Authentication Service verifies user credentials and
+        issues signed access tokens. It runs as a stateless component and can be scaled horizontally
+        behind a load balancer.</p>
+      <p id="p-arch" outputclass="architecture">Tokens are signed with the key configured in
+        <codeph>auth.signing.key</codeph>. The service keeps no session data on the local disk, so
+        any instance can serve any request.</p>
+      <p id="p-arch-note">The signing key is loaded once, at startup, and cached for the whole life
+        of the process.</p>
+    </section>
+    <section id="sec-config">
+      <title id="title-config">Configuring the service</title>
+      <p id="p-config-lead">The configuration file is read once, at startup. Restart the service
+        after every change.</p>
+      <ul id="ul-prereq">
+        <li id="li-prereq-1">A JDK 21 runtime is installed on the host.</li>
+        <li id="li-prereq-2">The database schema is migrated to revision 47.</li>
+        <li id="li-prereq-3">Port 8443 is open for inbound TLS traffic.</li>
+      </ul>
+    </section>
+  </body>
+</topic>

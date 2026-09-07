@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="cf-25-tracked-vs-plain" xml:lang="en-us">
+  <title id="topic-title">Tracked Change Against Plain Edit</title>
+  <shortdesc id="shortdesc">User A edits with track changes on. User B edits the same text with
+    track changes off.</shortdesc>
+  <body>
+    <section id="sec-overview">
+      <title id="title-overview">Overview</title>
+      <p id="p-intro">The Authentication Service <?oxy_delete author="Ana Popescu" timestamp="20260903T160000+0300" content="validates user credentials and "?>issues signed access
+        tokens.</p>
+      <p id="p-arch">The service keeps no session data on the local
+        disk<?oxy_insert_start author="Ana Popescu" timestamp="20260903T160100+0300"?> and no
+        session data in memory<?oxy_insert_end?>.</p>
+    </section>
+    <section id="sec-config">
+      <title id="title-config">Configuring the service</title>
+      <ol id="ol-steps">
+        <li id="li-step-1">Stop the running service
+          instance<?oxy_insert_start author="Ana Popescu" timestamp="20260903T160200+0300"?> and
+          wait for the connections to drain<?oxy_insert_end?>.</li>
+        <li id="li-step-2">Start the service and check the health endpoint.</li>
+      </ol>
+      <table id="table-limits" frame="all">
+        <title id="title-table-limits">Limits</title>
+        <tgroup cols="2">
+          <colspec colname="l1" colnum="1" colwidth="2*"/>
+          <colspec colname="l2" colnum="2" colwidth="1*"/>
+          <tbody>
+            <row id="row-lim-ttl">
+              <entry colname="l1" id="e-lim-ttl-name">Token TTL</entry>
+              <entry colname="l2" id="e-lim-ttl-def"><?oxy_delete author="Ana Popescu" timestamp="20260903T160300+0300" content="3600"?><?oxy_insert_start author="Ana Popescu" timestamp="20260903T160300+0300"?>7200<?oxy_insert_end?></entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section id="sec-trouble">
+      <title id="title-trouble">Troubleshooting</title>
+      <p id="p-trouble">Collect <?oxy_delete author="Ana Popescu" timestamp="20260903T160400+0300" content="the audit log and "?>the metrics snapshot before opening a ticket.</p>
+    </section>
+  </body>
+</topic>
+<?oxy_options track_changes="on"?>

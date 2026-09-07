@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="cf-19-xref-target-deleted" xml:lang="en-us">
+  <title id="topic-title">Link Target Deleted by the Other User</title>
+  <shortdesc id="shortdesc">User A works on the links. User B deletes what they point at. The merge
+    is structurally clean and referentially broken.</shortdesc>
+  <body>
+    <section id="sec-overview">
+      <title id="title-overview">Overview</title>
+      <p id="p-see-limits">The service limits are described in <xref
+          href="#cf-19-xref-target-deleted/sec-limits" format="dita">Limits</xref>.</p>
+      <p id="p-see-item">The schema revision is listed in <xref
+          href="#cf-19-xref-target-deleted/li-prereq-2" format="dita">the prerequisites</xref>.</p>
+      <p id="p-see-stable">The endpoints are listed in <xref
+          href="#cf-19-xref-target-deleted/sec-endpoints" format="dita">Endpoints</xref>.</p>
+      <ul id="ul-prereq">
+        <li id="li-prereq-1">A JDK 21 runtime is installed on the host.</li>
+      </ul>
+    </section>
+    <section id="sec-endpoints">
+      <title id="title-endpoints">Endpoints</title>
+      <p id="p-endpoints">All endpoints are served under <filepath>/auth/v1</filepath>.</p>
+    </section>
+  </body>
+</topic>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="cf-23-comment-ranges-crossing" xml:lang="en-us">
+  <title id="topic-title">Crossing Comment Ranges</title>
+  <shortdesc id="shortdesc">The two reviewers comment on ranges that overlap partially, so neither
+    range contains the other.</shortdesc>
+  <body>
+    <section id="sec-overview">
+      <title id="title-overview">Overview</title>
+      <p id="p-cross"><?oxy_comment_start author="Ana Popescu" timestamp="20260903T140000+0300" comment="Say which key: the signing key or the encryption key?" id="cmt-a-cross"?>Tokens are signed with the key<?oxy_comment_end?> configured in the properties file before the
+        service starts.</p>
+      <p id="p-boundary">Set <?oxy_comment_start author="Ana Popescu" timestamp="20260903T140100+0300" comment="Use the term property consistently, the installation topic says setting." id="cmt-a-boundary"?>the property <codeph id="cp-key">auth.signing<?oxy_comment_end?>.key</codeph> in the
+        configuration file.</p>
+      <ol id="ol-steps">
+        <?oxy_comment_start author="Ana Popescu" timestamp="20260903T140200+0300" comment="Add the expected duration of the drain." id="cmt-a-step"?><li
+          id="li-step-1">Stop the running service instance and drain the
+          connections.</li><?oxy_comment_end?>
+        <li id="li-step-2">Edit the properties file and set the signing key.</li>
+      </ol>
+      <p id="p-nested"><?oxy_comment_start author="Ana Popescu" timestamp="20260903T140300+0300" comment="This whole sentence should move to the auditing topic." id="cmt-a-nested"?>The service writes an audit record for every login attempt that it
+        rejects.<?oxy_comment_end?></p>
+    </section>
+  </body>
+</topic>

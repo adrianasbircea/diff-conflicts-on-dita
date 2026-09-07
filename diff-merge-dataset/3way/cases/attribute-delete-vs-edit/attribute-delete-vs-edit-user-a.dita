@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="cf-17-attr-delete-vs-modify" xml:lang="en-us">
+  <title id="topic-title">Attribute Deleted Against Attribute Modified</title>
+  <shortdesc id="shortdesc">For every attribute below, one user removes it and the other changes its
+    value.</shortdesc>
+  <body>
+    <section id="sec-overview">
+      <title id="title-overview">Overview</title>
+      <p id="p-arch">Tokens are signed with the key configured in
+        <codeph>auth.signing.key</codeph>.</p>
+      <p id="p-legacy" rev="2.0">The legacy <apiname>SessionManager</apiname> component is still
+        shipped.</p>
+      <note id="note-warn">Never commit the signing key to the repository.</note>
+      <xref id="x-limits" href="#cf-17-attr-delete-vs-modify/sec-limits" format="dita">Limits</xref>
+    </section>
+    <section id="sec-limits">
+      <title id="title-limits">Limits</title>
+      <table id="table-limits" frame="topbot" colsep="0">
+        <title id="title-table-limits">Limits</title>
+        <tgroup cols="2">
+          <colspec colname="l1" colnum="1" colwidth="2*"/>
+          <colspec colname="l2" colnum="2" colwidth="1*"/>
+          <thead>
+            <row id="row-lim-head">
+              <entry colname="l1" id="e-lim-head-1">Limit</entry>
+              <entry colname="l2" id="e-lim-head-2">Default</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row id="row-lim-ttl">
+              <entry colname="l1" id="e-lim-ttl-name">Token TTL</entry>
+              <entry colname="l2" id="e-lim-ttl-def">3600</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+  </body>
+</topic>

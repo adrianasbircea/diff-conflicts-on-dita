@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="cf-24-comment-id-collision" xml:lang="en-us">
+  <title id="topic-title">Colliding Comment Identifiers</title>
+  <shortdesc id="shortdesc">Both reviewers generate the same comment identifiers, independently, for
+    different threads.</shortdesc>
+  <body>
+    <section id="sec-overview">
+      <title id="title-overview">Overview</title>
+      <?oxy_comment_start author="Ana Popescu" timestamp="20260903T150000+0300" comment="Say which credential formats are accepted." id="cmt-1"?><?oxy_comment_start author="Dan Ionescu" timestamp="20260903T150100+0300" comment="Reply from A's branch: only username and password for now." parentID="cmt-1" mid="1"?><p
+        id="p-intro">The Authentication Service validates user credentials and issues signed access
+        tokens.</p><?oxy_comment_end mid="1"?><?oxy_comment_end?>
+      <note id="note-warn" type="warning">Never commit the signing key to the repository.</note>
+      <?oxy_comment_start author="Ana Popescu" timestamp="20260903T150200+0300" comment="Comment from A's branch on the configuration paragraph." id="cmt-3"?><p
+        id="p-config-lead">The configuration file is read once, at startup.</p><?oxy_comment_end?>
+      <ul id="ul-prereq">
+        <li id="li-prereq-1">A JDK 21 runtime is installed on the host.</li>
+        <li id="li-prereq-2"><?oxy_comment_start author="Ana Popescu" timestamp="20260903T150300+0300" comment="The revision number changes every release, use a variable." id="cmt-2"?>The
+          database schema is migrated to revision 42.<?oxy_comment_end?></li>
+      </ul>
+      <table id="table-features" frame="all">
+        <title id="title-features">Features</title>
+        <tgroup cols="2">
+          <colspec colname="c1" colnum="1" colwidth="2*"/>
+          <colspec colname="c2" colnum="2" colwidth="1*"/>
+          <tbody>
+            <row id="row-sec">
+              <entry colname="c1" id="e-sec-name">Transport security</entry>
+              <entry colname="c2" id="e-sec-status">Active</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+  </body>
+</topic>

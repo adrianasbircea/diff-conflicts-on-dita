@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="id-04-delete-vs-delete" xml:lang="en-us">
+  <title id="topic-title">Delete Against Delete</title>
+  <shortdesc id="shortdesc">Both users remove exactly the same content. This must merge cleanly, not
+    conflict.</shortdesc>
+  <body>
+    <section id="sec-overview">
+      <title id="title-overview">Overview</title>
+      <p id="p-intro">The Authentication Service validates user credentials and issues signed access
+        tokens.</p>
+      <p id="p-arch">Tokens are signed with the key configured in
+        <codeph>auth.signing.key</codeph>.</p>
+    </section>
+    <section id="sec-config">
+      <title id="title-config">Configuring the service</title>
+      <p id="p-config-lead">The configuration file is read once, at startup.</p>
+      <ul id="ul-prereq">
+        <li id="li-prereq-1">A JDK 21 runtime, or later, is installed on the host.</li>
+        <li id="li-prereq-2">The database schema is migrated to revision 42.</li>
+        <li id="li-prereq-4">A signing key of at least 256 bits is available.</li>
+      </ul>
+      <table id="table-limits" frame="all">
+        <title id="title-limits">Limits</title>
+        <tgroup cols="2">
+          <colspec colname="l1" colnum="1" colwidth="2*"/>
+          <colspec colname="l2" colnum="2" colwidth="1*"/>
+          <thead>
+            <row id="row-lim-head">
+              <entry colname="l1" id="e-lim-head-1">Limit</entry>
+              <entry colname="l2" id="e-lim-head-2">Default</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row id="row-lim-ttl">
+              <entry colname="l1" id="e-lim-ttl-name">Token TTL</entry>
+              <entry colname="l2" id="e-lim-ttl-def">3600</entry>
+            </row>
+            <row id="row-lim-rate">
+              <entry colname="l1" id="e-lim-rate-name">Requests per minute</entry>
+              <entry colname="l2" id="e-lim-rate-def">600</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+  </body>
+</topic>

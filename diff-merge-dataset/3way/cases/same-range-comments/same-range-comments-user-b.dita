@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="cf-22-comment-vs-comment" xml:lang="en-us">
+  <title id="topic-title">Comment Against Comment, Same Range</title>
+  <shortdesc id="shortdesc">Both reviewers comment on exactly the same ranges. The document text is
+    never touched.</shortdesc>
+  <body>
+    <section id="sec-config">
+      <title id="title-config">Configuring the service</title>
+      <?oxy_comment_start author="Dan Ionescu" timestamp="20260903T131000+0300" comment="This paragraph contradicts the hot reload feature request, please check." id="cmt-b-config"?><p
+        id="p-config-lead">The configuration file is read once, at startup. Restart the service
+        after every change.</p><?oxy_comment_end?>
+      <p id="p-startup">The signing key is loaded at <?oxy_comment_start author="Dan Ionescu" timestamp="20260903T131100+0300" comment="Say explicitly that this happens before the first request is served." id="cmt-b-frag"?>startup<?oxy_comment_end?> and cached for the whole life of the
+        process.</p>
+      <note id="note-warn" type="warning">Never commit the signing key to the repository.</note>
+      <ol id="ol-steps">
+        <li id="li-step-1">Stop the running service instance.</li>
+        <?oxy_comment_start author="Dan Ionescu" timestamp="20260903T131200+0300" comment="The Windows path is already documented in the installation topic, drop this step?" id="cmt-b-step" flag="done"?><li
+          id="li-step-2">Edit <filepath>conf/auth-service.properties</filepath> and set the
+          signing key.</li><?oxy_comment_end?>
+      </ol>
+      <table id="table-features" frame="all">
+        <title id="title-features">Features</title>
+        <tgroup cols="2">
+          <colspec colname="c1" colnum="1" colwidth="2*"/>
+          <colspec colname="c2" colnum="2" colwidth="1*"/>
+          <tbody>
+            <row id="row-sec">
+              <entry colname="c1" id="e-sec-name">Transport security</entry>
+              <?oxy_comment_start author="Dan Ionescu" timestamp="20260903T131300+0300" comment="Should this say Active since 4.0?" id="cmt-b-cell"?><?oxy_comment_start author="Ana Popescu" timestamp="20260903T131400+0300" comment="Yes, and add the same column to the endpoints table." parentID="cmt-b-cell" mid="1"?><entry
+                colname="c2" id="e-sec-status">Active</entry><?oxy_comment_end mid="1"?><?oxy_comment_end?>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+  </body>
+</topic>

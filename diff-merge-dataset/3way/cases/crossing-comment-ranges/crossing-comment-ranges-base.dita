@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="cf-23-comment-ranges-crossing" xml:lang="en-us">
+  <title id="topic-title">Crossing Comment Ranges</title>
+  <shortdesc id="shortdesc">The two reviewers comment on ranges that overlap partially, so neither
+    range contains the other.</shortdesc>
+  <body>
+    <section id="sec-overview">
+      <title id="title-overview">Overview</title>
+      <p id="p-cross">Tokens are signed with the key configured in the properties file before the
+        service starts.</p>
+      <p id="p-boundary">Set the property <codeph id="cp-key">auth.signing.key</codeph> in the
+        configuration file.</p>
+      <ol id="ol-steps">
+        <li id="li-step-1">Stop the running service instance and drain the connections.</li>
+        <li id="li-step-2">Edit the properties file and set the signing key.</li>
+      </ol>
+      <p id="p-nested">The service writes an audit record for every login attempt that it
+        rejects.</p>
+    </section>
+  </body>
+</topic>

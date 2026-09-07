@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="cf-20-table-columns" xml:lang="en-us">
+  <title id="topic-title">Column Added on Both Sides</title>
+  <shortdesc id="shortdesc">Both users widen the same table, with different columns. The merged
+    table must stay a valid grid.</shortdesc>
+  <body>
+    <section id="sec-endpoints">
+      <title id="title-endpoints">Endpoints</title>
+      <table id="table-endpoints" frame="all">
+        <title id="title-table-endpoints">REST endpoints</title>
+        <tgroup cols="4">
+          <colspec colname="e1" colnum="1" colwidth="1.4*"/>
+          <colspec colname="e2" colnum="2" colwidth="1*"/>
+          <colspec colname="e3" colnum="3" colwidth="3*"/>
+          <colspec colname="e4" colnum="4" colwidth="1*"/>
+          <thead>
+            <row id="row-ep-head">
+              <entry colname="e1" id="e-ep-head-1">Endpoint</entry>
+              <entry colname="e2" id="e-ep-head-2">Method</entry>
+              <entry colname="e3" id="e-ep-head-3">Description</entry>
+              <entry colname="e4" id="e-ep-head-4">Since</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row id="row-token">
+              <entry colname="e1" id="e-token-path">/token</entry>
+              <entry colname="e2" id="e-token-method">POST</entry>
+              <entry colname="e3" id="e-token-desc">Issues an access token.</entry>
+              <entry colname="e4" id="e-token-since">4.0</entry>
+            </row>
+            <row id="row-introspect">
+              <entry colname="e1" id="e-intro-path">/introspect</entry>
+              <entry colname="e2" id="e-intro-method">POST</entry>
+              <entry colname="e3" id="e-intro-desc">Validates an access token.</entry>
+              <entry colname="e4" id="e-intro-since">4.1</entry>
+            </row>
+            <row id="row-revoke">
+              <entry colname="e1" id="e-revoke-path">/revoke</entry>
+              <entry colname="e2" id="e-revoke-method">POST</entry>
+              <entry colname="e3" id="e-revoke-desc">Revokes an access token.</entry>
+              <entry colname="e4" id="e-revoke-since">4.2</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table id="table-limits" frame="all">
+        <title id="title-table-limits">Limits</title>
+        <tgroup cols="3">
+          <colspec colname="l1" colnum="1" colwidth="2*"/>
+          <colspec colname="l2" colnum="2" colwidth="1*"/>
+          <colspec colname="l3" colnum="3" colwidth="2*"/>
+          <thead>
+            <row id="row-lim-head">
+              <entry colname="l1" id="e-lim-head-1">Limit</entry>
+              <entry colname="l2" id="e-lim-head-2">Default</entry>
+              <entry colname="l3" id="e-lim-head-3">Notes</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row id="row-lim-ttl">
+              <entry colname="l1" id="e-lim-ttl-name">Token TTL</entry>
+              <entry colname="l2" id="e-lim-ttl-def">3600</entry>
+              <entry colname="l3" id="e-lim-ttl-notes">In seconds.</entry>
+            </row>
+            <row id="row-lim-rate">
+              <entry colname="l1" id="e-lim-rate-name">Requests per minute</entry>
+              <entry colname="l2" id="e-lim-rate-def">600</entry>
+              <entry colname="l3" id="e-lim-rate-notes">Per client identifier.</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+  </body>
+</topic>

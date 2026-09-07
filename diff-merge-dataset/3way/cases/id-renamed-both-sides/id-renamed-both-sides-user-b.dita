@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="cf-18-id-changed-both" xml:lang="en-us">
+  <title id="topic-title">Identifier Renamed on Both Sides</title>
+  <shortdesc id="shortdesc">Both users rename the same identifiers, to different values. The
+    elements themselves must still be recognised as the same elements.</shortdesc>
+  <body>
+    <section id="sec-overview">
+      <title id="title-overview">Overview</title>
+      <p id="p-arch" outputclass="architecture">Tokens are signed with the key configured in
+        <codeph>auth.signing.key</codeph> before they are returned.</p>
+      <p id="p-see">The service limits are described in <xref
+          href="#cf-18-id-changed-both/sec-service-limits" format="dita">Limits</xref>.</p>
+      <ul id="ul-prereq">
+        <li id="li-prereq-1">A JDK 21 runtime is installed on the host.</li>
+        <li id="li-db-schema">The database schema is migrated to revision 47.</li>
+      </ul>
+    </section>
+    <section id="sec-service-limits">
+      <title id="title-limits">Limits</title>
+      <p id="p-limits">Every limit below is applied per client identifier and per tenant.</p>
+      <p id="p-limits-2">A request that exceeds a limit is answered with 429.</p>
+    </section>
+  </body>
+</topic>

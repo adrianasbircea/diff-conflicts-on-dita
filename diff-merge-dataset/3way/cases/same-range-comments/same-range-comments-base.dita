@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="cf-22-comment-vs-comment" xml:lang="en-us">
+  <title id="topic-title">Comment Against Comment, Same Range</title>
+  <shortdesc id="shortdesc">Both reviewers comment on exactly the same ranges. The document text is
+    never touched.</shortdesc>
+  <body>
+    <section id="sec-config">
+      <title id="title-config">Configuring the service</title>
+      <p id="p-config-lead">The configuration file is read once, at startup. Restart the service
+        after every change.</p>
+      <p id="p-startup">The signing key is loaded at startup and cached for the whole life of the
+        process.</p>
+      <note id="note-warn" type="warning">Never commit the signing key to the repository.</note>
+      <ol id="ol-steps">
+        <li id="li-step-1">Stop the running service instance.</li>
+        <li id="li-step-2">Edit <filepath>conf/auth-service.properties</filepath> and set the
+          signing key.</li>
+      </ol>
+      <table id="table-features" frame="all">
+        <title id="title-features">Features</title>
+        <tgroup cols="2">
+          <colspec colname="c1" colnum="1" colwidth="2*"/>
+          <colspec colname="c2" colnum="2" colwidth="1*"/>
+          <tbody>
+            <row id="row-sec">
+              <entry colname="c1" id="e-sec-name">Transport security</entry>
+              <entry colname="c2" id="e-sec-status">Active</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+  </body>
+</topic>
