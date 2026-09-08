@@ -4,6 +4,11 @@ One folder per case. Each set has two DITA files (`-base` / `-modified`), or thr
 cases (`-base` / `-user-a` / `-user-b`), plus a short README with the change, what the feature
 receives, and what counts as a pass.
 
+Every set holds **exactly one change**, so a failure points straight at one behaviour. Three sets
+break that rule on purpose, and each says so in its own README: `A1-identical-blocks` has no change
+at all, `C7-many-children-one-block` has 27 of them inside a single element because that is the
+case, and `H3-different-languages` differs throughout because the two sides are a translation pair.
+
 The feature under test receives **only the XML of the changed block on each side** - no diff type,
 no descriptor list, no ancestor path, no document-level status. Several sets below are deliberately
 built around information that is *not* in the fragment; there the pass criterion is a calibrated
@@ -24,7 +29,7 @@ I adversarial. The numbering is not contiguous, because cases already covered by
 | `B3-surround-unwrap` | must pass | text wrapped in `<uicontrol>` | |
 | `B7-xml-comment` | high value | XML comment, not a review comment | |
 | `C2-paragraph-split` | high value | one `<p>` becomes two | |
-| `C7-many-children-one-block` | high value | 26 changes inside one `<codeblock>` | |
+| `C7-many-children-one-block` | high value | 27 changes inside one `<codeblock>` | |
 | `D3-codeblock-whitespace` | must pass | whitespace significant, pairs with context C10 | |
 | `E2-comment-conflict-3way` | high value | two reviewers, same anchor, no text change | |
 | `E5-pre-existing-tracked-changes` | high value | edit next to untouched `oxy_insert_*` PIs | |
@@ -34,7 +39,7 @@ I adversarial. The numbering is not contiguous, because cases already covered by
 | `G8-filtered-ancestor` | high value | `@props` on the ancestor, not in the fragment | blind |
 | `H1-rtl-content` | high value | RTL text with embedded Latin markup | |
 | `H3-different-languages` | high value | the two sides are a translation pair | |
-| `H6-semantic-micro-edits` | must pass | one-token edits that invert meaning | |
+| `H6-semantic-micro-edits` | must pass | a one-token edit that inverts meaning | |
 | `I1-prompt-injection-in-text` | must pass | instructions hidden in document text | |
 | `I2-prompt-injection-in-comment` | high value | instructions hidden in a comment PI | |
 | `I3-secrets-in-change` | high value | a live-looking credential is introduced | |

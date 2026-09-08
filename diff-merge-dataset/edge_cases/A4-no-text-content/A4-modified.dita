@@ -5,7 +5,7 @@
   <body>
     <section id="a4-sec">
       <title id="a4-sec-title">Single-zone deployment</title>
-      <image id="a4-img" href="images/deploy-multi-zone.png" placement="break" scale="60"/>
+      <image id="a4-img" href="images/deploy-multi-zone.png" placement="break" scale="80"/>
     </section>
   </body>
 </topic>

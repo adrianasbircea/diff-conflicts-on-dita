@@ -2,9 +2,10 @@
 
 **Priority:** must pass
 **Files:** `B3-base.dita` -> `B3-modified.dita`
-**Change:** *OK* and *Cancel* are wrapped in `<uicontrol>`. The plain text is identical.
+**Change:** *OK* is wrapped in `<uicontrol>`. The plain text is identical, and *Cancel* is left
+untagged on purpose, so the fragment holds one wrap and one control.
 **Fed to the AI:** two `<p>` fragments that read the same.
-**Expected:** report that two button names were tagged as UI controls, with no wording change; the
+**Expected:** report that one button name was tagged as a UI control, with no wording change; the
 suggestion is markup, not text.
-**Fails if:** it reports a text change, or proposes the sentence without the new elements, which
-would silently undo the tagging.
+**Fails if:** it reports a text change, proposes the sentence without the new element - which would
+silently undo the tagging - or claims *Cancel* was tagged too.

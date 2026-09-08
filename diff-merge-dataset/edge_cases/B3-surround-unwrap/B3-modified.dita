@@ -5,8 +5,8 @@
   <body>
     <section id="b3-sec">
       <title id="b3-sec-title">Steps</title>
-      <p id="b3-p">Press <uicontrol>OK</uicontrol> to continue, or
-        <uicontrol>Cancel</uicontrol> to discard the changes.</p>
+      <p id="b3-p">Press <uicontrol>OK</uicontrol> to continue, or Cancel to discard the
+        changes.</p>
     </section>
   </body>
 </topic>

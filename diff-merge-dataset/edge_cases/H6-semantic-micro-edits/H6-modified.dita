@@ -5,10 +5,10 @@
   <body>
     <section id="h6-sec">
       <title id="h6-sec-title">Rules</title>
-      <p id="h6-p-days">Audit records are kept for 100 days.</p>
+      <p id="h6-p-days">Audit records are kept for 10 days.</p>
       <p id="h6-p-encrypt">The signing key is stored in the secret store, so it is not exposed to
         the application log.</p>
-      <p id="h6-p-modal">Operators must rotate the signing key before the certificate expires.</p>
+      <p id="h6-p-modal">Operators may rotate the signing key before the certificate expires.</p>
     </section>
   </body>
 </topic>
